@@ -1,7 +1,8 @@
 # DirectDebug
- DirectDebug: Automated Testing and Debugging of Feature Models
 
-Viet-Man Le et al., 2021. DirectDebug: Automated Testing and Debugging of Feature Models. In Proceedings of the 43rd International Conference on Software Engineering: New Ideas and Emerging Results (ICSE-NIER 2021). (to appear)
+This is a repository which shows the implementation and the evaluation of the DirectDebug algorithm.
+
+DirectDebug is a direct diagnosis approach to the automated testing and debugging of variability models. The algorithm supports software engineers in the identification of minimal sets of faulty constraints that are responsible for an unintended behavior of a feature model. This approach has the potential to significantly decrease development and maintenance efforts for feature models. A paper [1] describing DirectDebug will be presented at ICSE-NIER 2021.
 
 ## Features
 
@@ -52,3 +53,7 @@ dd -e <configuration file> <filesave>
 
 Ex:
 dd -e ./data/conf/conf.csv ./data/results.txt
+
+## References
+
+Viet-Man Le et al., 2021. DirectDebug: Automated Testing and Debugging of Feature Models. In Proceedings of the 43rd International Conference on Software Engineering: New Ideas and Emerging Results (ICSE-NIER 2021). (to appear)
