@@ -1,0 +1,1266 @@
+FM_10_0.SPLX
+	FM_10_0_C5_0.TESTCASES
+		Diag: 2
+		Time for first: 1.51057E-4
+	FM_10_0_C5_1.TESTCASES
+		Diag: 2
+		Time for first: 2.02175E-4
+	FM_10_0_C5_2.TESTCASES
+		Diag: 2
+		Time for first: 1.64628E-4
+FM_10_1.SPLX
+	FM_10_1_C5_0.TESTCASES
+		Diag: 3
+		Time for first: 1.84264E-4
+	FM_10_1_C5_1.TESTCASES
+		Diag: 3
+		Time for first: 1.83156E-4
+	FM_10_1_C5_2.TESTCASES
+		Diag: 3
+		Time for first: 1.85371E-4
+FM_10_2.SPLX
+	FM_10_2_C5_0.TESTCASES
+		Diag: 4
+		Time for first: 2.45917E-4
+	FM_10_2_C5_1.TESTCASES
+		Diag: 2
+		Time for first: 1.80724E-4
+	FM_10_2_C5_2.TESTCASES
+		Diag: 2
+		Time for first: 1.99423E-4
+FM_10_0.SPLX
+	FM_10_0_C10_0.TESTCASES
+		Diag: 3
+		Time for first: 2.7533E-4
+	FM_10_0_C10_1.TESTCASES
+		Diag: 2
+		Time for first: 2.7353E-4
+	FM_10_0_C10_2.TESTCASES
+		Diag: 4
+		Time for first: 2.4695E-4
+FM_10_1.SPLX
+	FM_10_1_C10_0.TESTCASES
+		Diag: 2
+		Time for first: 2.46568E-4
+	FM_10_1_C10_1.TESTCASES
+		Diag: 4
+		Time for first: 2.41748E-4
+	FM_10_1_C10_2.TESTCASES
+		Diag: 5
+		Time for first: 2.72722E-4
+FM_10_2.SPLX
+	FM_10_2_C10_0.TESTCASES
+		Diag: 3
+		Time for first: 3.49796E-4
+	FM_10_2_C10_1.TESTCASES
+		Diag: 3
+		Time for first: 2.76114E-4
+	FM_10_2_C10_2.TESTCASES
+		Diag: 4
+		Time for first: 3.73238E-4
+FM_10_0.SPLX
+	FM_10_0_C25_0.TESTCASES
+		Diag: 4
+		Time for first: 6.44633E-4
+	FM_10_0_C25_1.TESTCASES
+		Diag: 4
+		Time for first: 6.94785E-4
+	FM_10_0_C25_2.TESTCASES
+		Diag: 4
+		Time for first: 6.94358E-4
+FM_10_1.SPLX
+	FM_10_1_C25_0.TESTCASES
+		Diag: 6
+		Time for first: 7.50105E-4
+	FM_10_1_C25_1.TESTCASES
+		Diag: 7
+		Time for first: 6.01674E-4
+	FM_10_1_C25_2.TESTCASES
+		Diag: 6
+		Time for first: 5.70871E-4
+FM_10_2.SPLX
+	FM_10_2_C25_0.TESTCASES
+		Diag: 3
+		Time for first: 5.2455E-4
+	FM_10_2_C25_1.TESTCASES
+		Diag: 4
+		Time for first: 5.18679E-4
+	FM_10_2_C25_2.TESTCASES
+		Diag: 3
+		Time for first: 5.22927E-4
+FM_10_0.SPLX
+	FM_10_0_C50_0.TESTCASES
+		Diag: 4
+		Time for first: 0.00166768
+	FM_10_0_C50_1.TESTCASES
+		Diag: 4
+		Time for first: 0.001264826
+	FM_10_0_C50_2.TESTCASES
+		Diag: 5
+		Time for first: 0.001236372
+FM_10_1.SPLX
+	FM_10_1_C50_0.TESTCASES
+		Diag: 8
+		Time for first: 0.001189652
+	FM_10_1_C50_1.TESTCASES
+		Diag: 8
+		Time for first: 0.001200444
+	FM_10_1_C50_2.TESTCASES
+		Diag: 8
+		Time for first: 0.001552396
+FM_10_2.SPLX
+	FM_10_2_C50_0.TESTCASES
+		Diag: 4
+		Time for first: 0.001159949
+	FM_10_2_C50_1.TESTCASES
+		Diag: 4
+		Time for first: 0.001198721
+	FM_10_2_C50_2.TESTCASES
+		Diag: 5
+		Time for first: 0.002224222
+FM_10_0.SPLX
+	FM_10_0_C100_0.TESTCASES
+		Diag: 5
+		Time for first: 0.002448619
+	FM_10_0_C100_1.TESTCASES
+		Diag: 5
+		Time for first: 0.002367836
+	FM_10_0_C100_2.TESTCASES
+		Diag: 5
+		Time for first: 0.002570132
+FM_10_1.SPLX
+	FM_10_1_C100_0.TESTCASES
+		Diag: 7
+		Time for first: 0.002381917
+	FM_10_1_C100_1.TESTCASES
+		Diag: 8
+		Time for first: 0.002758246
+	FM_10_1_C100_2.TESTCASES
+		Diag: 9
+		Time for first: 0.00217805
+FM_10_2.SPLX
+	FM_10_2_C100_0.TESTCASES
+		Diag: 5
+		Time for first: 0.002500467
+	FM_10_2_C100_1.TESTCASES
+		Diag: 5
+		Time for first: 0.002226373
+	FM_10_2_C100_2.TESTCASES
+		Diag: 5
+		Time for first: 0.002365094
+FM_10_0.SPLX
+	FM_10_0_C250_0.TESTCASES
+		Diag: 5
+		Time for first: 0.006197979
+	FM_10_0_C250_1.TESTCASES
+		Diag: 5
+		Time for first: 0.006551089
+	FM_10_0_C250_2.TESTCASES
+		Diag: 5
+		Time for first: 0.006393892
+FM_10_1.SPLX
+	FM_10_1_C250_0.TESTCASES
+		Diag: 9
+		Time for first: 0.008733252
+	FM_10_1_C250_1.TESTCASES
+		Diag: 9
+		Time for first: 0.008862632
+	FM_10_1_C250_2.TESTCASES
+		Diag: 9
+		Time for first: 0.009569102
+FM_10_2.SPLX
+	FM_10_2_C250_0.TESTCASES
+		Diag: 5
+		Time for first: 0.008402037
+	FM_10_2_C250_1.TESTCASES
+		Diag: 5
+		Time for first: 0.008450319
+	FM_10_2_C250_2.TESTCASES
+		Diag: 5
+		Time for first: 0.00819921
+FM_10_0.SPLX
+	FM_10_0_C500_0.TESTCASES
+		Diag: 5
+		Time for first: 0.015462534
+	FM_10_0_C500_1.TESTCASES
+		Diag: 5
+		Time for first: 0.015535477
+	FM_10_0_C500_2.TESTCASES
+		Diag: 5
+		Time for first: 0.014805266
+FM_10_1.SPLX
+	FM_10_1_C500_0.TESTCASES
+		Diag: 9
+		Time for first: 0.031455719
+	FM_10_1_C500_1.TESTCASES
+		Diag: 9
+		Time for first: 0.032560851
+	FM_10_1_C500_2.TESTCASES
+		Diag: 9
+		Time for first: 0.032085752
+FM_10_2.SPLX
+	FM_10_2_C500_0.TESTCASES
+		Diag: 5
+		Time for first: 0.031053938
+	FM_10_2_C500_1.TESTCASES
+		Diag: 5
+		Time for first: 0.030950367
+	FM_10_2_C500_2.TESTCASES
+		Diag: 5
+		Time for first: 0.02992094
+FM_20_0.SPLX
+	FM_20_0_C5_0.TESTCASES
+		Diag: 4
+		Time for first: 4.28145E-4
+	FM_20_0_C5_1.TESTCASES
+		Diag: 4
+		Time for first: 4.85761E-4
+	FM_20_0_C5_2.TESTCASES
+		Diag: 3
+		Time for first: 3.23621E-4
+FM_20_1.SPLX
+	FM_20_1_C5_0.TESTCASES
+		Diag: 5
+		Time for first: 4.34604E-4
+	FM_20_1_C5_1.TESTCASES
+		Diag: 3
+		Time for first: 3.88804E-4
+	FM_20_1_C5_2.TESTCASES
+		Diag: 2
+		Time for first: 2.98354E-4
+FM_20_2.SPLX
+	FM_20_2_C5_0.TESTCASES
+		Diag: 2
+		Time for first: 3.42156E-4
+	FM_20_2_C5_1.TESTCASES
+		Diag: 2
+		Time for first: 3.33757E-4
+	FM_20_2_C5_2.TESTCASES
+		Diag: 2
+		Time for first: 3.12356E-4
+FM_20_0.SPLX
+	FM_20_0_C10_0.TESTCASES
+		Diag: 6
+		Time for first: 7.77459E-4
+	FM_20_0_C10_1.TESTCASES
+		Diag: 5
+		Time for first: 5.23566E-4
+	FM_20_0_C10_2.TESTCASES
+		Diag: 7
+		Time for first: 8.96876E-4
+FM_20_1.SPLX
+	FM_20_1_C10_0.TESTCASES
+		Diag: 7
+		Time for first: 7.9628E-4
+	FM_20_1_C10_1.TESTCASES
+		Diag: 2
+		Time for first: 5.47052E-4
+	FM_20_1_C10_2.TESTCASES
+		Diag: 4
+		Time for first: 5.53092E-4
+FM_20_2.SPLX
+	FM_20_2_C10_0.TESTCASES
+		Diag: 3
+		Time for first: 4.44733E-4
+	FM_20_2_C10_1.TESTCASES
+		Diag: 3
+		Time for first: 4.46057E-4
+	FM_20_2_C10_2.TESTCASES
+		Diag: 3
+		Time for first: 4.63646E-4
+FM_20_0.SPLX
+	FM_20_0_C25_0.TESTCASES
+		Diag: 8
+		Time for first: 0.001350342
+	FM_20_0_C25_1.TESTCASES
+		Diag: 8
+		Time for first: 0.001731485
+	FM_20_0_C25_2.TESTCASES
+		Diag: 9
+		Time for first: 0.001416698
+FM_20_1.SPLX
+	FM_20_1_C25_0.TESTCASES
+		Diag: 9
+		Time for first: 0.001783672
+	FM_20_1_C25_1.TESTCASES
+		Diag: 8
+		Time for first: 0.00142218
+	FM_20_1_C25_2.TESTCASES
+		Diag: 7
+		Time for first: 0.001336881
+FM_20_2.SPLX
+	FM_20_2_C25_0.TESTCASES
+		Diag: 9
+		Time for first: 0.001417709
+	FM_20_2_C25_1.TESTCASES
+		Diag: 7
+		Time for first: 0.001302649
+	FM_20_2_C25_2.TESTCASES
+		Diag: 7
+		Time for first: 0.001297025
+FM_20_0.SPLX
+	FM_20_0_C50_0.TESTCASES
+		Diag: 11
+		Time for first: 0.002766162
+	FM_20_0_C50_1.TESTCASES
+		Diag: 12
+		Time for first: 0.003320146
+	FM_20_0_C50_2.TESTCASES
+		Diag: 11
+		Time for first: 0.002608597
+FM_20_1.SPLX
+	FM_20_1_C50_0.TESTCASES
+		Diag: 11
+		Time for first: 0.002621068
+	FM_20_1_C50_1.TESTCASES
+		Diag: 10
+		Time for first: 0.002712835
+	FM_20_1_C50_2.TESTCASES
+		Diag: 10
+		Time for first: 0.002519759
+FM_20_2.SPLX
+	FM_20_2_C50_0.TESTCASES
+		Diag: 14
+		Time for first: 0.002963781
+	FM_20_2_C50_1.TESTCASES
+		Diag: 11
+		Time for first: 0.002920915
+	FM_20_2_C50_2.TESTCASES
+		Diag: 10
+		Time for first: 0.003879
+FM_20_0.SPLX
+	FM_20_0_C100_0.TESTCASES
+		Diag: 15
+		Time for first: 0.007334641
+	FM_20_0_C100_1.TESTCASES
+		Diag: 14
+		Time for first: 0.005690587
+	FM_20_0_C100_2.TESTCASES
+		Diag: 13
+		Time for first: 0.005391633
+FM_20_1.SPLX
+	FM_20_1_C100_0.TESTCASES
+		Diag: 16
+		Time for first: 0.00531074
+	FM_20_1_C100_1.TESTCASES
+		Diag: 13
+		Time for first: 0.004516854
+	FM_20_1_C100_2.TESTCASES
+		Diag: 13
+		Time for first: 0.004566501
+FM_20_2.SPLX
+	FM_20_2_C100_0.TESTCASES
+		Diag: 15
+		Time for first: 0.005298321
+	FM_20_2_C100_1.TESTCASES
+		Diag: 14
+		Time for first: 0.005128465
+	FM_20_2_C100_2.TESTCASES
+		Diag: 13
+		Time for first: 0.005031999
+FM_20_0.SPLX
+	FM_20_0_C250_0.TESTCASES
+		Diag: 15
+		Time for first: 0.012926177
+	FM_20_0_C250_1.TESTCASES
+		Diag: 17
+		Time for first: 0.013405449
+	FM_20_0_C250_2.TESTCASES
+		Diag: 16
+		Time for first: 0.014223814
+FM_20_1.SPLX
+	FM_20_1_C250_0.TESTCASES
+		Diag: 17
+		Time for first: 0.013497906
+	FM_20_1_C250_1.TESTCASES
+		Diag: 18
+		Time for first: 0.012110304
+	FM_20_1_C250_2.TESTCASES
+		Diag: 18
+		Time for first: 0.013735655
+FM_20_2.SPLX
+	FM_20_2_C250_0.TESTCASES
+		Diag: 15
+		Time for first: 0.013062308
+	FM_20_2_C250_1.TESTCASES
+		Diag: 15
+		Time for first: 0.012880698
+	FM_20_2_C250_2.TESTCASES
+		Diag: 15
+		Time for first: 0.012190964
+FM_20_0.SPLX
+	FM_20_0_C500_0.TESTCASES
+		Diag: 17
+		Time for first: 0.027032421
+	FM_20_0_C500_1.TESTCASES
+		Diag: 17
+		Time for first: 0.027820437
+	FM_20_0_C500_2.TESTCASES
+		Diag: 17
+		Time for first: 0.028517767
+FM_20_1.SPLX
+	FM_20_1_C500_0.TESTCASES
+		Diag: 19
+		Time for first: 0.024337542
+	FM_20_1_C500_1.TESTCASES
+		Diag: 18
+		Time for first: 0.026701542
+	FM_20_1_C500_2.TESTCASES
+		Diag: 19
+		Time for first: 0.024894794
+FM_20_2.SPLX
+	FM_20_2_C500_0.TESTCASES
+		Diag: 16
+		Time for first: 0.028782784
+	FM_20_2_C500_1.TESTCASES
+		Diag: 15
+		Time for first: 0.026353392
+	FM_20_2_C500_2.TESTCASES
+		Diag: 16
+		Time for first: 0.027856029
+FM_50_0.SPLX
+	FM_50_0_C5_0.TESTCASES
+		Diag: 4
+		Time for first: 0.001584969
+	FM_50_0_C5_1.TESTCASES
+		Diag: 5
+		Time for first: 0.001817564
+	FM_50_0_C5_2.TESTCASES
+		Diag: 2
+		Time for first: 0.001222541
+FM_50_1.SPLX
+	FM_50_1_C5_0.TESTCASES
+		Diag: 4
+		Time for first: 0.001589678
+	FM_50_1_C5_1.TESTCASES
+		Diag: 4
+		Time for first: 0.00139399
+	FM_50_1_C5_2.TESTCASES
+		Diag: 5
+		Time for first: 0.001406453
+FM_50_2.SPLX
+	FM_50_2_C5_0.TESTCASES
+		Diag: 2
+		Time for first: 9.59243E-4
+	FM_50_2_C5_1.TESTCASES
+		Diag: 4
+		Time for first: 0.001379452
+	FM_50_2_C5_2.TESTCASES
+		Diag: 3
+		Time for first: 0.001160777
+FM_50_0.SPLX
+	FM_50_0_C10_0.TESTCASES
+		Diag: 5
+		Time for first: 0.002491732
+	FM_50_0_C10_1.TESTCASES
+		Diag: 2
+		Time for first: 0.001884883
+	FM_50_0_C10_2.TESTCASES
+		Diag: 6
+		Time for first: 0.002185634
+FM_50_1.SPLX
+	FM_50_1_C10_0.TESTCASES
+		Diag: 8
+		Time for first: 0.002921095
+	FM_50_1_C10_1.TESTCASES
+		Diag: 7
+		Time for first: 0.002737317
+	FM_50_1_C10_2.TESTCASES
+		Diag: 6
+		Time for first: 0.002073737
+FM_50_2.SPLX
+	FM_50_2_C10_0.TESTCASES
+		Diag: 6
+		Time for first: 0.002284432
+	FM_50_2_C10_1.TESTCASES
+		Diag: 3
+		Time for first: 0.001467745
+	FM_50_2_C10_2.TESTCASES
+		Diag: 9
+		Time for first: 0.002909655
+FM_50_0.SPLX
+	FM_50_0_C25_0.TESTCASES
+		Diag: 13
+		Time for first: 0.007429065
+	FM_50_0_C25_1.TESTCASES
+		Diag: 12
+		Time for first: 0.00600228
+	FM_50_0_C25_2.TESTCASES
+		Diag: 8
+		Time for first: 0.005803201
+FM_50_1.SPLX
+	FM_50_1_C25_0.TESTCASES
+		Diag: 7
+		Time for first: 0.003392599
+	FM_50_1_C25_1.TESTCASES
+		Diag: 8
+		Time for first: 0.004077402
+	FM_50_1_C25_2.TESTCASES
+		Diag: 11
+		Time for first: 0.005390846
+FM_50_2.SPLX
+	FM_50_2_C25_0.TESTCASES
+		Diag: 12
+		Time for first: 0.007832126
+	FM_50_2_C25_1.TESTCASES
+		Diag: 10
+		Time for first: 0.005476087
+	FM_50_2_C25_2.TESTCASES
+		Diag: 8
+		Time for first: 0.004587791
+FM_50_0.SPLX
+	FM_50_0_C50_0.TESTCASES
+		Diag: 13
+		Time for first: 0.00820524
+	FM_50_0_C50_1.TESTCASES
+		Diag: 15
+		Time for first: 0.009014792
+	FM_50_0_C50_2.TESTCASES
+		Diag: 15
+		Time for first: 0.009494109
+FM_50_1.SPLX
+	FM_50_1_C50_0.TESTCASES
+		Diag: 15
+		Time for first: 0.008377393
+	FM_50_1_C50_1.TESTCASES
+		Diag: 12
+		Time for first: 0.006848397
+	FM_50_1_C50_2.TESTCASES
+		Diag: 13
+		Time for first: 0.007918727
+FM_50_2.SPLX
+	FM_50_2_C50_0.TESTCASES
+		Diag: 11
+		Time for first: 0.008255236
+	FM_50_2_C50_1.TESTCASES
+		Diag: 16
+		Time for first: 0.011401847
+	FM_50_2_C50_2.TESTCASES
+		Diag: 14
+		Time for first: 0.010016989
+FM_50_0.SPLX
+	FM_50_0_C100_0.TESTCASES
+		Diag: 21
+		Time for first: 0.020129671
+	FM_50_0_C100_1.TESTCASES
+		Diag: 23
+		Time for first: 0.019576412
+	FM_50_0_C100_2.TESTCASES
+		Diag: 21
+		Time for first: 0.017020994
+FM_50_1.SPLX
+	FM_50_1_C100_0.TESTCASES
+		Diag: 17
+		Time for first: 0.013505688
+	FM_50_1_C100_1.TESTCASES
+		Diag: 22
+		Time for first: 0.018086777
+	FM_50_1_C100_2.TESTCASES
+		Diag: 21
+		Time for first: 0.015770473
+FM_50_2.SPLX
+	FM_50_2_C100_0.TESTCASES
+		Diag: 14
+		Time for first: 0.015619106
+	FM_50_2_C100_1.TESTCASES
+		Diag: 26
+		Time for first: 0.017091713
+	FM_50_2_C100_2.TESTCASES
+		Diag: 19
+		Time for first: 0.017034187
+FM_50_0.SPLX
+	FM_50_0_C250_0.TESTCASES
+		Diag: 22
+		Time for first: 0.033268989
+	FM_50_0_C250_1.TESTCASES
+		Diag: 28
+		Time for first: 0.037324768
+	FM_50_0_C250_2.TESTCASES
+		Diag: 31
+		Time for first: 0.034895407
+FM_50_1.SPLX
+	FM_50_1_C250_0.TESTCASES
+		Diag: 31
+		Time for first: 0.034263249
+	FM_50_1_C250_1.TESTCASES
+		Diag: 29
+		Time for first: 0.035019966
+	FM_50_1_C250_2.TESTCASES
+		Diag: 28
+		Time for first: 0.041128174
+FM_50_2.SPLX
+	FM_50_2_C250_0.TESTCASES
+		Diag: 25
+		Time for first: 0.029919297
+	FM_50_2_C250_1.TESTCASES
+		Diag: 28
+		Time for first: 0.031305976
+	FM_50_2_C250_2.TESTCASES
+		Diag: 29
+		Time for first: 0.035287495
+FM_50_0.SPLX
+	FM_50_0_C500_0.TESTCASES
+		Diag: 35
+		Time for first: 0.070128591
+	FM_50_0_C500_1.TESTCASES
+		Diag: 36
+		Time for first: 0.070558901
+	FM_50_0_C500_2.TESTCASES
+		Diag: 37
+		Time for first: 0.066575322
+FM_50_1.SPLX
+	FM_50_1_C500_0.TESTCASES
+		Diag: 39
+		Time for first: 0.060149328
+	FM_50_1_C500_1.TESTCASES
+		Diag: 35
+		Time for first: 0.068325018
+	FM_50_1_C500_2.TESTCASES
+		Diag: 39
+		Time for first: 0.064869596
+FM_50_2.SPLX
+	FM_50_2_C500_0.TESTCASES
+		Diag: 35
+		Time for first: 0.069174621
+	FM_50_2_C500_1.TESTCASES
+		Diag: 33
+		Time for first: 0.06634492
+	FM_50_2_C500_2.TESTCASES
+		Diag: 35
+		Time for first: 0.069411888
+FM_100_0.SPLX
+	FM_100_0_C5_0.TESTCASES
+		Diag: 3
+		Time for first: 0.002808413
+	FM_100_0_C5_1.TESTCASES
+		Diag: 2
+		Time for first: 0.002600867
+	FM_100_0_C5_2.TESTCASES
+		Diag: 2
+		Time for first: 0.002405212
+FM_100_1.SPLX
+	FM_100_1_C5_0.TESTCASES
+		Diag: 5
+		Time for first: 0.003527776
+	FM_100_1_C5_1.TESTCASES
+		Diag: 7
+		Time for first: 0.005661972
+	FM_100_1_C5_2.TESTCASES
+		Diag: 2
+		Time for first: 0.003032283
+FM_100_2.SPLX
+	FM_100_2_C5_0.TESTCASES
+		Diag: 4
+		Time for first: 0.003672263
+	FM_100_2_C5_1.TESTCASES
+		Diag: 2
+		Time for first: 0.002441255
+	FM_100_2_C5_2.TESTCASES
+		Diag: 2
+		Time for first: 0.002209744
+FM_100_0.SPLX
+	FM_100_0_C10_0.TESTCASES
+		Diag: 3
+		Time for first: 0.003619574
+	FM_100_0_C10_1.TESTCASES
+		Diag: 2
+		Time for first: 0.003132086
+	FM_100_0_C10_2.TESTCASES
+		Diag: 5
+		Time for first: 0.00602175
+FM_100_1.SPLX
+	FM_100_1_C10_0.TESTCASES
+		Diag: 7
+		Time for first: 0.00609402
+	FM_100_1_C10_1.TESTCASES
+		Diag: 9
+		Time for first: 0.009431541
+	FM_100_1_C10_2.TESTCASES
+		Diag: 6
+		Time for first: 0.006203824
+FM_100_2.SPLX
+	FM_100_2_C10_0.TESTCASES
+		Diag: 5
+		Time for first: 0.005430625
+	FM_100_2_C10_1.TESTCASES
+		Diag: 3
+		Time for first: 0.003727237
+	FM_100_2_C10_2.TESTCASES
+		Diag: 6
+		Time for first: 0.006583486
+FM_100_0.SPLX
+	FM_100_0_C25_0.TESTCASES
+		Diag: 7
+		Time for first: 0.01096972
+	FM_100_0_C25_1.TESTCASES
+		Diag: 12
+		Time for first: 0.013636503
+	FM_100_0_C25_2.TESTCASES
+		Diag: 13
+		Time for first: 0.016457634
+FM_100_1.SPLX
+	FM_100_1_C25_0.TESTCASES
+		Diag: 10
+		Time for first: 0.011832572
+	FM_100_1_C25_1.TESTCASES
+		Diag: 16
+		Time for first: 0.020218371
+	FM_100_1_C25_2.TESTCASES
+		Diag: 11
+		Time for first: 0.0218368
+FM_100_2.SPLX
+	FM_100_2_C25_0.TESTCASES
+		Diag: 7
+		Time for first: 0.009504132
+	FM_100_2_C25_1.TESTCASES
+		Diag: 9
+		Time for first: 0.013059799
+	FM_100_2_C25_2.TESTCASES
+		Diag: 10
+		Time for first: 0.01333314
+FM_100_0.SPLX
+	FM_100_0_C50_0.TESTCASES
+		Diag: 13
+		Time for first: 0.019250304
+	FM_100_0_C50_1.TESTCASES
+		Diag: 13
+		Time for first: 0.01748768
+	FM_100_0_C50_2.TESTCASES
+		Diag: 13
+		Time for first: 0.021510352
+FM_100_1.SPLX
+	FM_100_1_C50_0.TESTCASES
+		Diag: 17
+		Time for first: 0.0277637
+	FM_100_1_C50_1.TESTCASES
+		Diag: 14
+		Time for first: 0.027197709
+	FM_100_1_C50_2.TESTCASES
+		Diag: 16
+		Time for first: 0.029738732
+FM_100_2.SPLX
+	FM_100_2_C50_0.TESTCASES
+		Diag: 14
+		Time for first: 0.027004726
+	FM_100_2_C50_1.TESTCASES
+		Diag: 16
+		Time for first: 0.027130994
+	FM_100_2_C50_2.TESTCASES
+		Diag: 17
+		Time for first: 0.027790844
+FM_100_0.SPLX
+	FM_100_0_C100_0.TESTCASES
+		Diag: 13
+		Time for first: 0.025506688
+	FM_100_0_C100_1.TESTCASES
+		Diag: 16
+		Time for first: 0.033682415
+	FM_100_0_C100_2.TESTCASES
+		Diag: 18
+		Time for first: 0.039540172
+FM_100_1.SPLX
+	FM_100_1_C100_0.TESTCASES
+		Diag: 24
+		Time for first: 0.045689998
+	FM_100_1_C100_1.TESTCASES
+		Diag: 27
+		Time for first: 0.055319635
+	FM_100_1_C100_2.TESTCASES
+		Diag: 26
+		Time for first: 0.044338101
+FM_100_2.SPLX
+	FM_100_2_C100_0.TESTCASES
+		Diag: 15
+		Time for first: 0.044697279
+	FM_100_2_C100_1.TESTCASES
+		Diag: 19
+		Time for first: 0.05513884
+	FM_100_2_C100_2.TESTCASES
+		Diag: 23
+		Time for first: 0.042384647
+FM_100_0.SPLX
+	FM_100_0_C250_0.TESTCASES
+		Diag: 29
+		Time for first: 0.084426973
+	FM_100_0_C250_1.TESTCASES
+		Diag: 25
+		Time for first: 0.075721393
+	FM_100_0_C250_2.TESTCASES
+		Diag: 24
+		Time for first: 0.069307081
+FM_100_1.SPLX
+	FM_100_1_C250_0.TESTCASES
+		Diag: 29
+		Time for first: 0.081001188
+	FM_100_1_C250_1.TESTCASES
+		Diag: 30
+		Time for first: 0.102748658
+	FM_100_1_C250_2.TESTCASES
+		Diag: 35
+		Time for first: 0.104006941
+FM_100_2.SPLX
+	FM_100_2_C250_0.TESTCASES
+		Diag: 29
+		Time for first: 0.10128945
+	FM_100_2_C250_1.TESTCASES
+		Diag: 32
+		Time for first: 0.115134296
+	FM_100_2_C250_2.TESTCASES
+		Diag: 34
+		Time for first: 0.107262334
+FM_100_0.SPLX
+	FM_100_0_C500_0.TESTCASES
+		Diag: 34
+		Time for first: 0.146585304
+	FM_100_0_C500_1.TESTCASES
+		Diag: 42
+		Time for first: 0.179339083
+	FM_100_0_C500_2.TESTCASES
+		Diag: 41
+		Time for first: 0.153640093
+FM_100_1.SPLX
+	FM_100_1_C500_0.TESTCASES
+		Diag: 48
+		Time for first: 0.173164624
+	FM_100_1_C500_1.TESTCASES
+		Diag: 45
+		Time for first: 0.177592086
+	FM_100_1_C500_2.TESTCASES
+		Diag: 43
+		Time for first: 0.211363073
+FM_100_2.SPLX
+	FM_100_2_C500_0.TESTCASES
+		Diag: 42
+		Time for first: 0.240337749
+	FM_100_2_C500_1.TESTCASES
+		Diag: 48
+		Time for first: 0.212434357
+	FM_100_2_C500_2.TESTCASES
+		Diag: 40
+		Time for first: 0.189535195
+FM_500_0.SPLX
+	FM_500_0_C5_0.TESTCASES
+		Diag: 5
+		Time for first: 0.044639294
+	FM_500_0_C5_1.TESTCASES
+		Diag: 3
+		Time for first: 0.026719957
+	FM_500_0_C5_2.TESTCASES
+		Diag: 4
+		Time for first: 0.036594244
+FM_500_1.SPLX
+	FM_500_1_C5_0.TESTCASES
+		Diag: 4
+		Time for first: 0.031167147
+	FM_500_1_C5_1.TESTCASES
+		Diag: 1
+		Time for first: 0.020157698
+	FM_500_1_C5_2.TESTCASES
+		Diag: 5
+		Time for first: 0.039376043
+FM_500_2.SPLX
+	FM_500_2_C5_0.TESTCASES
+		Diag: 4
+		Time for first: 0.034278203
+	FM_500_2_C5_1.TESTCASES
+		Diag: 2
+		Time for first: 0.020308754
+	FM_500_2_C5_2.TESTCASES
+		Diag: 4
+		Time for first: 0.032594579
+FM_500_0.SPLX
+	FM_500_0_C10_0.TESTCASES
+		Diag: 3
+		Time for first: 0.029250499
+	FM_500_0_C10_1.TESTCASES
+		Diag: 7
+		Time for first: 0.067004178
+	FM_500_0_C10_2.TESTCASES
+		Diag: 4
+		Time for first: 0.039744678
+FM_500_1.SPLX
+	FM_500_1_C10_0.TESTCASES
+		Diag: 4
+		Time for first: 0.03520916
+	FM_500_1_C10_1.TESTCASES
+		Diag: 3
+		Time for first: 0.038638998
+	FM_500_1_C10_2.TESTCASES
+		Diag: 5
+		Time for first: 0.042151133
+FM_500_2.SPLX
+	FM_500_2_C10_0.TESTCASES
+		Diag: 8
+		Time for first: 0.063755084
+	FM_500_2_C10_1.TESTCASES
+		Diag: 6
+		Time for first: 0.050179479
+	FM_500_2_C10_2.TESTCASES
+		Diag: 6
+		Time for first: 0.039075193
+FM_500_0.SPLX
+	FM_500_0_C25_0.TESTCASES
+		Diag: 14
+		Time for first: 0.190361438
+	FM_500_0_C25_1.TESTCASES
+		Diag: 16
+		Time for first: 0.209558628
+	FM_500_0_C25_2.TESTCASES
+		Diag: 6
+		Time for first: 0.104790962
+FM_500_1.SPLX
+	FM_500_1_C25_0.TESTCASES
+		Diag: 8
+		Time for first: 0.095561084
+	FM_500_1_C25_1.TESTCASES
+		Diag: 8
+		Time for first: 0.095397144
+	FM_500_1_C25_2.TESTCASES
+		Diag: 9
+		Time for first: 0.147204416
+FM_500_2.SPLX
+	FM_500_2_C25_0.TESTCASES
+		Diag: 11
+		Time for first: 0.130165646
+	FM_500_2_C25_1.TESTCASES
+		Diag: 10
+		Time for first: 0.180912488
+	FM_500_2_C25_2.TESTCASES
+		Diag: 9
+		Time for first: 0.122851937
+FM_500_0.SPLX
+	FM_500_0_C50_0.TESTCASES
+		Diag: 13
+		Time for first: 0.25129104
+	FM_500_0_C50_1.TESTCASES
+		Diag: 17
+		Time for first: 0.3596867
+	FM_500_0_C50_2.TESTCASES
+		Diag: 16
+		Time for first: 0.262608725
+FM_500_1.SPLX
+	FM_500_1_C50_0.TESTCASES
+		Diag: 11
+		Time for first: 0.193666012
+	FM_500_1_C50_1.TESTCASES
+		Diag: 10
+		Time for first: 0.227130502
+	FM_500_1_C50_2.TESTCASES
+		Diag: 12
+		Time for first: 0.235060713
+FM_500_2.SPLX
+	FM_500_2_C50_0.TESTCASES
+		Diag: 25
+		Time for first: 0.379021411
+	FM_500_2_C50_1.TESTCASES
+		Diag: 14
+		Time for first: 0.291161984
+	FM_500_2_C50_2.TESTCASES
+		Diag: 19
+		Time for first: 0.314838921
+FM_500_0.SPLX
+	FM_500_0_C100_0.TESTCASES
+		Diag: 29
+		Time for first: 0.777325774
+	FM_500_0_C100_1.TESTCASES
+		Diag: 28
+		Time for first: 0.748929803
+	FM_500_0_C100_2.TESTCASES
+		Diag: 23
+		Time for first: 0.49442876
+FM_500_1.SPLX
+	FM_500_1_C100_0.TESTCASES
+		Diag: 15
+		Time for first: 0.3412323
+	FM_500_1_C100_1.TESTCASES
+		Diag: 16
+		Time for first: 0.388915425
+	FM_500_1_C100_2.TESTCASES
+		Diag: 18
+		Time for first: 0.413856085
+FM_500_2.SPLX
+	FM_500_2_C100_0.TESTCASES
+		Diag: 24
+		Time for first: 0.591064702
+	FM_500_2_C100_1.TESTCASES
+		Diag: 26
+		Time for first: 0.595488461
+	FM_500_2_C100_2.TESTCASES
+		Diag: 28
+		Time for first: 0.624847246
+FM_500_0.SPLX
+	FM_500_0_C250_0.TESTCASES
+		Diag: 39
+		Time for first: 1.432367922
+	FM_500_0_C250_1.TESTCASES
+		Diag: 40
+		Time for first: 1.210072503
+	FM_500_0_C250_2.TESTCASES
+		Diag: 33
+		Time for first: 0.942992808
+FM_500_1.SPLX
+	FM_500_1_C250_0.TESTCASES
+		Diag: 18
+		Time for first: 0.88291988
+	FM_500_1_C250_1.TESTCASES
+		Diag: 17
+		Time for first: 0.764465657
+	FM_500_1_C250_2.TESTCASES
+		Diag: 22
+		Time for first: 0.857642782
+FM_500_2.SPLX
+	FM_500_2_C250_0.TESTCASES
+		Diag: 52
+		Time for first: 2.048593299
+	FM_500_2_C250_1.TESTCASES
+		Diag: 39
+		Time for first: 1.392758722
+	FM_500_2_C250_2.TESTCASES
+		Diag: 44
+		Time for first: 1.442271538
+FM_500_0.SPLX
+	FM_500_0_C500_0.TESTCASES
+		Diag: 48
+		Time for first: 2.472261572
+	FM_500_0_C500_1.TESTCASES
+		Diag: 46
+		Time for first: 2.176827806
+	FM_500_0_C500_2.TESTCASES
+		Diag: 49
+		Time for first: 1.733222973
+FM_500_1.SPLX
+	FM_500_1_C500_0.TESTCASES
+		Diag: 24
+		Time for first: 2.073482919
+	FM_500_1_C500_1.TESTCASES
+		Diag: 23
+		Time for first: 1.723549836
+	FM_500_1_C500_2.TESTCASES
+		Diag: 25
+		Time for first: 1.614262105
+FM_500_2.SPLX
+	FM_500_2_C500_0.TESTCASES
+		Diag: 58
+		Time for first: 3.270548609
+	FM_500_2_C500_1.TESTCASES
+		Diag: 64
+		Time for first: 3.562940869
+	FM_500_2_C500_2.TESTCASES
+		Diag: 59
+		Time for first: 3.153672246
+FM_1000_0.SPLX
+	FM_1000_0_C5_0.TESTCASES
+		Diag: 7
+		Time for first: 0.192563198
+	FM_1000_0_C5_1.TESTCASES
+		Diag: 2
+		Time for first: 0.077336806
+	FM_1000_0_C5_2.TESTCASES
+		Diag: 7
+		Time for first: 0.17463675
+FM_1000_1.SPLX
+	FM_1000_1_C5_0.TESTCASES
+		Diag: 7
+		Time for first: 0.101920253
+	FM_1000_1_C5_1.TESTCASES
+		Diag: 12
+		Time for first: 0.171742909
+	FM_1000_1_C5_2.TESTCASES
+		Diag: 8
+		Time for first: 0.166892434
+FM_1000_2.SPLX
+	FM_1000_2_C5_0.TESTCASES
+		Diag: 4
+		Time for first: 0.083798431
+	FM_1000_2_C5_1.TESTCASES
+		Diag: 4
+		Time for first: 0.105585658
+	FM_1000_2_C5_2.TESTCASES
+		Diag: 6
+		Time for first: 0.10753306
+FM_1000_0.SPLX
+	FM_1000_0_C10_0.TESTCASES
+		Diag: 6
+		Time for first: 0.185577803
+	FM_1000_0_C10_1.TESTCASES
+		Diag: 6
+		Time for first: 0.15932753
+	FM_1000_0_C10_2.TESTCASES
+		Diag: 10
+		Time for first: 0.207772863
+FM_1000_1.SPLX
+	FM_1000_1_C10_0.TESTCASES
+		Diag: 12
+		Time for first: 0.288836228
+	FM_1000_1_C10_1.TESTCASES
+		Diag: 3
+		Time for first: 0.112038842
+	FM_1000_1_C10_2.TESTCASES
+		Diag: 13
+		Time for first: 0.15869798
+FM_1000_2.SPLX
+	FM_1000_2_C10_0.TESTCASES
+		Diag: 6
+		Time for first: 0.158457018
+	FM_1000_2_C10_1.TESTCASES
+		Diag: 5
+		Time for first: 0.142227472
+	FM_1000_2_C10_2.TESTCASES
+		Diag: 4
+		Time for first: 0.149919156
+FM_1000_0.SPLX
+	FM_1000_0_C25_0.TESTCASES
+		Diag: 11
+		Time for first: 0.467402691
+	FM_1000_0_C25_1.TESTCASES
+		Diag: 14
+		Time for first: 0.570568993
+	FM_1000_0_C25_2.TESTCASES
+		Diag: 10
+		Time for first: 0.405824982
+FM_1000_1.SPLX
+	FM_1000_1_C25_0.TESTCASES
+		Diag: 17
+		Time for first: 0.44253829
+	FM_1000_1_C25_1.TESTCASES
+		Diag: 8
+		Time for first: 0.282365735
+	FM_1000_1_C25_2.TESTCASES
+		Diag: 10
+		Time for first: 0.388789196
+FM_1000_2.SPLX
+	FM_1000_2_C25_0.TESTCASES
+		Diag: 10
+		Time for first: 0.340178312
+	FM_1000_2_C25_1.TESTCASES
+		Diag: 8
+		Time for first: 0.298174484
+	FM_1000_2_C25_2.TESTCASES
+		Diag: 9
+		Time for first: 0.399587756
+FM_1000_0.SPLX
+	FM_1000_0_C50_0.TESTCASES
+		Diag: 17
+		Time for first: 0.640512877
+	FM_1000_0_C50_1.TESTCASES
+		Diag: 17
+		Time for first: 0.627443866
+	FM_1000_0_C50_2.TESTCASES
+		Diag: 17
+		Time for first: 0.758106755
+FM_1000_1.SPLX
+	FM_1000_1_C50_0.TESTCASES
+		Diag: 10
+		Time for first: 0.542453655
+	FM_1000_1_C50_1.TESTCASES
+		Diag: 19
+		Time for first: 0.913959828
+	FM_1000_1_C50_2.TESTCASES
+		Diag: 16
+		Time for first: 0.703410453
+FM_1000_2.SPLX
+	FM_1000_2_C50_0.TESTCASES
+		Diag: 16
+		Time for first: 0.861999992
+	FM_1000_2_C50_1.TESTCASES
+		Diag: 15
+		Time for first: 0.60043557
+	FM_1000_2_C50_2.TESTCASES
+		Diag: 16
+		Time for first: 0.841452137
+FM_1000_0.SPLX
+	FM_1000_0_C100_0.TESTCASES
+		Diag: 23
+		Time for first: 1.534602678
+	FM_1000_0_C100_1.TESTCASES
+		Diag: 19
+		Time for first: 1.251376146
+	FM_1000_0_C100_2.TESTCASES
+		Diag: 22
+		Time for first: 1.486765018
+FM_1000_1.SPLX
+	FM_1000_1_C100_0.TESTCASES
+		Diag: 10
+		Time for first: 0.969086971
+	FM_1000_1_C100_1.TESTCASES
+		Diag: 17
+		Time for first: 1.324571282
+	FM_1000_1_C100_2.TESTCASES
+		Diag: 15
+		Time for first: 1.333944912
+FM_1000_2.SPLX
+	FM_1000_2_C100_0.TESTCASES
+		Diag: 16
+		Time for first: 1.144900136
+	FM_1000_2_C100_1.TESTCASES
+		Diag: 20
+		Time for first: 1.531602935
+	FM_1000_2_C100_2.TESTCASES
+		Diag: 19
+		Time for first: 1.340767926
+FM_1000_0.SPLX
+	FM_1000_0_C250_0.TESTCASES
+		Diag: 27
+		Time for first: 3.164147018
+	FM_1000_0_C250_1.TESTCASES
+		Diag: 28
+		Time for first: 4.043272789
+	FM_1000_0_C250_2.TESTCASES
+		Diag: 23
+		Time for first: 3.018438674
+FM_1000_1.SPLX
+	FM_1000_1_C250_0.TESTCASES
+		Diag: 18
+		Time for first: 2.574759657
+	FM_1000_1_C250_1.TESTCASES
+		Diag: 16
+		Time for first: 2.260286162
+	FM_1000_1_C250_2.TESTCASES
+		Diag: 19
+		Time for first: 2.444481952
+FM_1000_2.SPLX
+	FM_1000_2_C250_0.TESTCASES
+		Diag: 31
+		Time for first: 3.256588331
+	FM_1000_2_C250_1.TESTCASES
+		Diag: 32
+		Time for first: 3.056892826
+	FM_1000_2_C250_2.TESTCASES
+		Diag: 20
+		Time for first: 2.932040005
+FM_1000_0.SPLX
+	FM_1000_0_C500_0.TESTCASES
+		Diag: 27
+		Time for first: 5.865560667
+	FM_1000_0_C500_1.TESTCASES
+		Diag: 26
+		Time for first: 5.72175374
+	FM_1000_0_C500_2.TESTCASES
+		Diag: 30
+		Time for first: 6.515647336
+FM_1000_1.SPLX
+	FM_1000_1_C500_0.TESTCASES
+		Diag: 27
+		Time for first: 4.715229993
+	FM_1000_1_C500_1.TESTCASES
+		Diag: 28
+		Time for first: 5.081426818
+	FM_1000_1_C500_2.TESTCASES
+		Diag: 19
+		Time for first: 5.478394396
+FM_1000_2.SPLX
+	FM_1000_2_C500_0.TESTCASES
+		Diag: 27
+		Time for first: 6.179974016
+	FM_1000_2_C500_1.TESTCASES
+		Diag: 31
+		Time for first: 6.200839773
+	FM_1000_2_C500_2.TESTCASES
+		Diag: 25
+		Time for first: 6.107615681
+1.8852388888888888E-4	2.8399955555555555E-4	6.136202222222223E-4	0.0014104735555555555	0.0024218593333333333	0.007928834666666667	0.02598120488888889	
+3.719508888888889E-4	6.054178888888888E-4	0.001450960111111111	0.002923584777777778	0.005363304555555556	0.013114808333333332	0.026921856444444447	
+0.0013905185555555556	0.00232847	0.005554599666666667	0.008836970000000001	0.017092780111111112	0.03471259122222223	0.06728202055555556	
+0.003151087222222222	0.005582682555555556	0.014538741222222222	0.024986115666666666	0.042921975	0.093433146	0.18711017377777778	
+0.03175954655555555	0.04500093355555556	0.14186708255555558	0.27938511200000005	0.5528987284444445	1.2193427901111111	2.420085437222222	
+0.13133438877777778	0.17365054355555556	0.39949227099999995	0.7210861258888889	1.3241797782222222	2.972323046	5.762938046666666	
