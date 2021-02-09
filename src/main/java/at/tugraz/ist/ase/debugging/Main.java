@@ -1,3 +1,11 @@
+/* DirectDebug: Automated Testing and Debugging of Feature Models
+ *
+ * Copyright (C) 2020-2021  AIG team, Institute for Software Technology,
+ * Graz University of Technology, Austria
+ *
+ * Contact: http://ase.ist.tugraz.at/ASE/
+ */
+
 package at.tugraz.ist.ase.debugging;
 
 import at.tugraz.ist.ase.debugging.testcases.TestCasesClassifier;
@@ -10,6 +18,11 @@ import at.tugraz.ist.ase.featuremodel.parser.SXFMParser;
 
 import java.io.File;
 
+/**
+ * Main app.
+ *
+ * @author Viet-Man Le (vietman.le@ist.tugraz.at)
+ */
 public class Main {
     public static void main(String[] args) throws Exception {
         if (args == null || args.length == 0 || args[0].equals("-h")) {
