@@ -11,7 +11,7 @@
           <option name="goals">
             <list>
               <option value="install:install-file" />
-              <option value="-Dfile=../DirectDebugV2/lib/sxfm.jar" />
+              <option value="-Dfile=./lib/sxfm.jar" />
               <option value="-DgroupId=org.splot-research" />
               <option value="-DartifactId=sxfm" />
               <option value="-Dversion=1.0" />

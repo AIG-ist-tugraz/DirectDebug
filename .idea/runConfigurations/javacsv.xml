@@ -11,7 +11,7 @@
           <option name="goals">
             <list>
               <option value="install:install-file" />
-              <option value="-Dfile=../DirectDebugV2/lib/javacsv.jar" />
+              <option value="-Dfile=./lib/javacsv.jar" />
               <option value="-DgroupId=es.us.isa" />
               <option value="-DartifactId=javacsv" />
               <option value="-Dversion=1.0" />

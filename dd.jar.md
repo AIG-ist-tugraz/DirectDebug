@@ -1,16 +1,18 @@
-# dd.jar
-**dd.jar** is a standalone Java application that encapsulates all evaluation steps in one program. The latest version of Java (Java version 8 update 270 or later) is necessary to execute **dd.jar**.
+# dd.jar guideline
+
+**dd.jar** is a standalone Java application that encapsulates all evaluation steps in one program. 
+The latest version of Java (Java version 8 update 270 or later) is necessary to execute **dd.jar**.
 
 **dd.jar** provides 6 functionalities as follows:
 
-## Feature models generation
+### Feature models generation
 
-Syntax:
+**Syntax**:
 ```
 java -jar dd.jar -g <#feature models> <#features> <%CTC> <#max products> <path to save>
 ```
 
-where
+*where*
 
 | *parameters* | *description* |
 | ----------- | ----------- |
@@ -20,37 +22,37 @@ where
 | ```<#max products>``` | the max number of products of the feature model to be generated |
 | ```<path to save>``` | the path to the folder where generated feature models will be saved |
 
-Example:
+**Example**:
 ```
 java -jar dd.jar -g 2 500 40 10000 ./data/fms
 ``` 
 
-## Feature model statistics
+### Feature model statistics
 
-Syntax:
+**Syntax**:
 ```
 java -jar dd.jar -s <folder path> <output file path>
 ```
 
-where
+*where*
 
 | *parameters* | *description* |
 | ----------- | ----------- |
 | ```<folder path>``` | the folder where feature models locate |
 | ```<output file path>``` | the path to the save file |
 
-Example:
+**Example**:
 ```
 java -jar dd.jar -s ./data/fms ./data/statisticsAll.re
 ```
 
-## Test suite generation
+### Test suite generation
 
-Syntax:
+**Syntax**:
 ```
 java -jar dd.jar -ts -g <folder path> <path to save> <#max combinations> <randomly search>
 ```
-where
+*where*
 
 | *parameters* | *description* |
 | ----------- | ----------- |
@@ -59,37 +61,37 @@ where
 | ```<#max combinations>``` | the maximum number of combinations be selected when generating partial configurations |
 |```<randomly search>```| true/false - if true, then the selection of combinations is random |
 
-Ex:
+**Example**:
 ```
 java -jar dd.jar -ts -g ./data/fms ./data/testsuite 1000 false
 ```
 
-## Test cases classification
+### Test cases classification
 
-Syntax:
+**Syntax**:
 ```
 java -jar dd.jar -tc -c <configuration file>
 ```
 
-where
+*where*
 
 | *parameters* | *description* |
 | ----------- | ----------- |
 | ```<configuration file>``` | a configuration file |
 
-Ex:
+**Example**:
 ```
 java -jar dd.jar -tc -c ./data/configurations.csv
 ```
 
-## Test cases selection
+### Test cases selection
 
-Syntax:
+**Syntax**:
 ```
 java -jar dd.jar -tc -s <configuration file> <#scenarios> <%violated test cases>
 ```
 
-where
+*where*
 
 | *parameters* | *description* |
 | ----------- | ----------- |
@@ -97,26 +99,26 @@ where
 | ```<#scenarios>``` | the number of scenarios |
 | ```<%violated test cases>``` | the percentage of violated test cases |
 
-Ex:
+**Example**:
 ```
 java -jar dd.jar -tc -s ./data/configuration.csv 5 0.3
 ```
 
-## DirectDebug evaluation
+### DirectDebug evaluation
 
-Syntax:
+**Syntax**:
 ```
 java -jar dd.jar -e <configuration file> <filesave>
 ```
 
-where
+*where*
 
 | *parameters* | *description* |
 | ----------- | ----------- |
 | ```<configuration file>``` | a configuration file |
 | ```<filesave>``` | the file to save the evaluation results |
 
-Ex:
+**Example**:
 ```
 java -jar dd.jar -e ./data/conf/conf.csv ./data/results.txt
 ```

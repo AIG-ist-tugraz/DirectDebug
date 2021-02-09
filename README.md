@@ -16,8 +16,9 @@ The DirectDebug evaluation process consists of five steps as follows:
 
 ### Step 1 - Feature models generation
 
-We can synthesize randomly feature models using [Betty framework](https://www.isa.us.es/betty/welcome). 
-Then the generated feature models were selected on the basis of the number of Choco constraints.
+We synthesized randomly feature models using [Betty framework](https://www.isa.us.es/betty/welcome). 
+Then the generated feature models were selected on the basis of the number of Choco constraints, 
+and the ratio of cross-tree constraints.
 The numbers of Choco constraints of selected feature models are 10, 20, 50, 100, 500, and 1000.
 The folder *./data/fms* stores 18 feature models which were selected to the evaluation.
 The first number in the filename represents the number of Choco constraints. 
@@ -32,32 +33,71 @@ and partial configuration. The folder *./data/testsuite* stores 18 test suites f
 
 In this step, test cases of each test suite will be classified into violated test cases,
 or non-violated test cases. The folder *./data/classifiedTS* stores 18 classified test suites.
-   
+
 ### Step 4 - Test cases selection
 
 For each selected feature model, we select 21 scenarios for 7 cardinalities of test cases.
 The cardinalities of test cases are 5, 10, 25, 50, 100, 250, 500.
 The folder *./data/testcases* stores 378 selected scenarios.
-   
+
 ### Step 5 - DirectDebug evaluation
 
 The input of the final step is 18 feature models and 378 selected scenarios of test cases. 
 The output is a table in which each entry represents the average diagnosis computing time derived from 3 repetitions
 (see Table III in [1]).
 
+## Implementation
+
+This implementation supports the evaluation process via **six** sub-programs which
+can be triggered by command line arguments.
+
+| *arguments* | *description* |
+| ----------- | ----------- |
+| ```-g``` | feature models generation |
+| ```-s``` | feature model statistics |
+| ```-ts -g``` | test suite generation |
+| ```-tc -c``` | test cases classification |
+| ```-tc -s``` | test cases selection |
+| ```-e``` | DirectDebug evaluation |
+
 ## How to reproduce the experiment
 
 ### Use the standalone Java application
 
-We provide a standalone Java application naming **dd.jar** that encapsulates all evaluation steps in one program.
+We publish a standalone Java application naming **dd.jar** that encapsulates the evaluation steps in one program.
 
 **dd.jar** is available from the [latest release](https://github.com/AIG-ist-tugraz/DirectDebug/releases/tag/v1.0).
+For further details of this app, we refer to [dd.jar guideline](https://github.com/AIG-ist-tugraz/DirectDebug/blob/main/dd.jar.md).
 
 ### Get your own copy to run offline
 
-#### Prerequisites
+Some part of our implementation depends on [Betty framework](https://www.isa.us.es/betty/welcome), 
+and ["fmapi" library](http://gsd.uwaterloo.ca/). Thus, after cloning the source code into your system, 
+you need to run 7 Maven configurations, which already included in the project. If you use the IntelliJ IDE,
+then open Maven window (*View/Tool Windows/Maven*), and double-click on 7 configurations in the Run Configurations section.
 
-The program depends on [Betty framework](https://www.isa.us.es/betty/welcome), and ["fmapi" library](http://gsd.uwaterloo.ca/).
+### Construct Configuration files
+
+Three sub-programs (Test cases classification, Test cases selection, and DirectDebug evaluation) use configuration files
+(in a CSV format) as an input of the sub-programs.
+
+To **Test cases classification, and Test cases selection**, a configuration file is require (see *./data/configurations.csv*)
+which has four values for each record as follows:
+
+- first value is the path to a feature model file
+- second value is the path to the corresponding testsuite file of the feature model
+- third value is the path to the corresponding classified testsuite file of the feature model
+- fourth value is the path where selected test cases will be stored
+
+To **DirectDebug evaluation**, some configuration files are necessary (see *./data/conf*).
+First, a main configuration file (see *./data/conf/conf.csv*) has 6 records which correspond to 
+6 cardinalities of constraints. For each record, there are 7 values representing 7 other configuration files,
+that defines scenarios of test cases.
+
+Second, there are 7 configuration files in each sub-folder which defines scenarios of test cases.
+For each record in those files, there are four values as follows:
+- first value is the path to a feature model file.
+- three remaining values are the paths to three scenarios of test cases.
 
 ## References
 

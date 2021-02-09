@@ -11,7 +11,7 @@
           <option name="goals">
             <list>
               <option value="install:install-file" />
-              <option value="-Dfile=../DirectDebugV2/lib/FaMaAttributedModel-1.0.2.jar" />
+              <option value="-Dfile=./lib/FaMaAttributedModel-1.0.2.jar" />
               <option value="-DgroupId=es.us.isa" />
               <option value="-DartifactId=FaMaAttributedModel" />
               <option value="-Dversion=1.0.2" />

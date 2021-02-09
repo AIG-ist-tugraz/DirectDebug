@@ -5,9 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01e647dc-89e0-4f4b-ac29-3295b124815f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dd.jar.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/BeTTy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/BeTTy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/FaMaAttributedModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/FaMaAttributedModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/FaMaFeatureModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/FaMaFeatureModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/FaMaSDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/FaMaSDK.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/commons.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/commons.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/javacsv.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/javacsv.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/sxfm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/sxfm.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dd.jar.md" beforeDir="false" afterPath="$PROJECT_DIR$/dd.jar.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/tugraz/ist/ase/debugging/testcases/TestCasesClassifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/tugraz/ist/ase/debugging/testcases/TestCasesClassifier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/tugraz/ist/ase/debugging/testcases/TestCasesSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/tugraz/ist/ase/debugging/testcases/TestCasesSelector.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,9 +39,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="build.tools" />
   </component>
-  <component name="RunManager" selected="Maven.BeTTy">
+  <component name="RunManager" selected="Maven.sxfm">
     <list>
       <item itemvalue="Maven.BeTTy" />
       <item itemvalue="Maven.commons" />

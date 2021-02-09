@@ -26,10 +26,10 @@ import java.util.Set;
 
 /**
  * This class that classifies test cases into non-violated test cases and violated test cases.
- * The input of this class is a CSV file in which:
- * - first column is the path to a feature model file
- * - second column is the path to the corresponding testsuite file of the feature model
- * - third column is the path to the corresponding classified testsuite file of the feature model
+ * The input of this class is a CSV file in which for each record:
+ * - first value is the path to a feature model file
+ * - second value is the path to the corresponding testsuite file of the feature model
+ * - third value is the path to the corresponding classified testsuite file of the feature model
  *
  * @author Viet-Man Le (vietman.le@ist.tugraz.at)
  */

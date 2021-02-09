@@ -20,11 +20,11 @@ import java.util.List;
 
 /**
  * This class that selects test cases for the DirectDebug evaluation.
- * The input of this class is a CSV file in which:
- * - first column is the path to a feature model file
- * - second column is the path to the corresponding testsuite file of the feature model
- * - third column is the path to the corresponding classified testsuite file of the feature model
- * - fourth column is the path where selected test cases will be stored
+ * The input of this class is a CSV file in which for each record:
+ * - first value is the path to a feature model file
+ * - second value is the path to the corresponding testsuite file of the feature model
+ * - third value is the path to the corresponding classified testsuite file of the feature model
+ * - fourth value is the path where selected test cases will be stored
  *
  * @author Viet-Man Le (vietman.le@ist.tugraz.at)
  */

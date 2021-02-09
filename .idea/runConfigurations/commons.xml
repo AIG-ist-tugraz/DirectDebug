@@ -11,7 +11,7 @@
           <option name="goals">
             <list>
               <option value="install:install-file" />
-              <option value="-Dfile=../DirectDebugV2/lib/commons-math-2.2.jar" />
+              <option value="-Dfile=./lib/commons-math-2.2.jar" />
               <option value="-DgroupId=es.us.isa" />
               <option value="-DartifactId=commons-math" />
               <option value="-Dversion=2.2" />

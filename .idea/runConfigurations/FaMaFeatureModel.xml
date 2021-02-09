@@ -11,7 +11,7 @@
           <option name="goals">
             <list>
               <option value="install:install-file" />
-              <option value="-Dfile=../DirectDebugV2/lib/FaMaFeatureModel-0.9.1.jar" />
+              <option value="-Dfile=./lib/FaMaFeatureModel-0.9.1.jar" />
               <option value="-DgroupId=es.us.isa" />
               <option value="-DartifactId=FaMaFeatureModel" />
               <option value="-Dversion=0.9.1" />
