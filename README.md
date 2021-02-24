@@ -101,4 +101,4 @@ For each record in those files, there are four values as follows:
 
 ## References
 
-[1] Viet-Man Le, Alexander Felfernig et al., 2021. DirectDebug: Automated Testing and Debugging of Feature Models. In Proceedings of the 43rd International Conference on Software Engineering: New Ideas and Emerging Results (ICSE-NIER 2021). (to appear)
+[1] Viet-Man Le, Alexander Felfernig et al., 2021. DirectDebug: Automated Testing and Debugging of Feature Models. In Proceedings of the 43rd International Conference on Software Engineering: New Ideas and Emerging Results (ICSE-NIER 2021). (to appear) [[PDF] from arxiv.org](https://arxiv.org/pdf/2102.05949.pdf)
