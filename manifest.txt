@@ -1,0 +1,2 @@
+Main-Class: at.tugraz.ist.ase.debugging.Main
+Class-Path: lib/choco-solver-4.10.6.jar lib/BeTTy-1.1.1.jar lib/commons-math-2.2.jar lib/FaMaAttributedModel-1.0.2.jar lib/FaMaFeatureModel-0.9.1.jar lib/FaMaSDK-1.1.1.jar lib/javacsv.jar lib/sxfm.jar lib/guava-30.0-jre.jar lib/commons-collections4-4.4.jar lib/opencsv-5.3.jar lib/trove4j-3.0.3.jar

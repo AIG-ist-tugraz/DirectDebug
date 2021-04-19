@@ -63,7 +63,7 @@ public class ChocoConsistencyChecker implements IConsistencyChecker {
 
         // Call solve()
         try {
-            incrementCounter(COUNTER_CONSISTENCY_CHECKS);
+            incrementCounter(COUNTER_CHOCO_SOLVER_CALLS);
             incrementCounter(COUNTER_SIZE_CONSISTENCY_CHECKS, model.getNbCstrs());
 
             boolean isFeasible = model.getSolver().solve();
@@ -91,6 +91,7 @@ public class ChocoConsistencyChecker implements IConsistencyChecker {
      * This function returns true if every test case in {@param TC} is consistent with
      * the given set of constraints {@param C}, otherwise false. Test cases inducing
      * an inconsistency with {@param C} are stored in {@param TCp}.
+     * Note that at the beginning, TC = TCp.
      * @param C a set of constraints
      * @param TC a considering test cases
      * @param TCp a remaining inconsistent test cases
@@ -98,11 +99,13 @@ public class ChocoConsistencyChecker implements IConsistencyChecker {
      * the given set of constraints {@param C}, otherwise false.
      */
     public boolean isConsistent(Collection<String> C, Collection<String> TC, Collection<String> TCp) {
+        incrementCounter(COUNTER_CONSISTENCY_CHECKS);
         boolean consistent = true;
         for (String tc: TC) {
             if (!isConsistent(C, tc)) {
-                TCp.add(tc);
                 consistent = false;
+            } else {
+                TCp.remove(tc);
             }
         }
         return consistent;

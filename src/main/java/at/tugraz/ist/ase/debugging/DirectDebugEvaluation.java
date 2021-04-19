@@ -15,14 +15,11 @@ import at.tugraz.ist.ase.debugging.core.TestSuite;
 import at.tugraz.ist.ase.featuremodel.core.FeatureModel;
 import at.tugraz.ist.ase.featuremodel.parser.ParserException;
 import at.tugraz.ist.ase.featuremodel.parser.SXFMParser;
-import com.opencsv.CSVReader;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Set;
 
+import static at.tugraz.ist.ase.MBDiagLib.core.DebugConfigurations.showDebugs;
 import static at.tugraz.ist.ase.MBDiagLib.core.DebugConfigurations.showEvaluations;
 import static at.tugraz.ist.ase.MBDiagLib.measurement.PerformanceMeasurement.*;
 
@@ -32,29 +29,10 @@ import static at.tugraz.ist.ase.MBDiagLib.measurement.PerformanceMeasurement.*;
  * @author Viet-Man Le (vietman.le@ist.tugraz.at)
  */
 public class DirectDebugEvaluation {
-    private String configurationFile;
-    private String filesave;
+    private Configuration conf;
 
-    public DirectDebugEvaluation(String configurationFile, String filesave) {
-        this.configurationFile = configurationFile;
-        this.filesave = filesave;
-    }
-
-    private List<List<String>> readConfigurations(String filepath) {
-        List<List<String>> configurations = new ArrayList<>();
-
-        try (CSVReader reader = new CSVReader(new FileReader(filepath))) {
-            String[] lineInArray;
-            while ((lineInArray = reader.readNext()) != null) {
-                List<String> conf = Arrays.asList(lineInArray);
-
-                configurations.add(conf);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return configurations;
+    public DirectDebugEvaluation(Configuration conf) {
+        this.conf = conf;
     }
 
     private double[][] createResultsTable(int col, int row) {
@@ -70,16 +48,12 @@ public class DirectDebugEvaluation {
     // EVALUATION
     public void evaluate() throws ParserException, IOException {
 
-        System.out.println("Reading configurations...");
-        List<List<String>> configurations = readConfigurations(configurationFile);
-        System.out.println("#Configurations: " + configurations.size());
-        System.out.println();
-
         System.out.println("Preparing evaluation...");
-        BufferedWriter writer = new BufferedWriter(new FileWriter(filesave)); // "data/results.txt"
+        BufferedWriter writer = new BufferedWriter(new FileWriter(conf.getResultPath() + "results.txt")); // "data/results.txt"
 
         SXFMParser parser = new SXFMParser();
-        showEvaluations = true;
+        showEvaluations = conf.getShowEvaluation();
+        showDebugs = conf.getShowDebug();
 
         int col = 6;
         int row = 7;
@@ -96,18 +70,18 @@ public class DirectDebugEvaluation {
             else if (count == 1)
                 System.out.println("\tMeasuring the runtime...");
 
-            for (List<String> column : configurations) {
+            for (int numFeatures: conf.getCardCF()) {
                 int indexRow = 0;
-                for (String cell : column) {
-                    List<List<String>> scenarios = readConfigurations(cell);
+                for (int numTS: conf.getCardTS()) {
 
-                    for (List<String> scenario : scenarios) {
-                        File fileFM = new File(scenario.get(0));
+                    for (int i = 0; i < conf.getNumGenFM(); i++) {
+                        File fileFM = new File(conf.getFMSFilenameInData(numFeatures, i));
 
-                        for (int i = 1; i < 4; i++) {
+                        // take #iter scenarios
+                        for (int j = 0; j < conf.getNumIter(); j++) {
                             FeatureModel featureModel = parser.parse(fileFM);
 
-                            File fileTC = new File(scenario.get(i));
+                            File fileTC = new File(conf.getScenariosFilenameInData(numFeatures, i, numTS, j));
                             TestSuite testSuite = new TestSuite(fileTC);
 
                             System.out.print("\t\t" + fileFM.getName().toUpperCase());

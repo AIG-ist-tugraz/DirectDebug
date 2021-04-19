@@ -54,7 +54,7 @@ public class DirectDebug {
         Set<String> BwithC = SetUtils.union(B, C); incrementCounter(COUNTER_UNION_OPERATOR);
 
         // if isEmpty(C) or consistent(B U C) return Φ
-        Set<String> TCp = new LinkedHashSet<>();
+        Set<String> TCp = new LinkedHashSet<>(TC);
         if (C.isEmpty()
                 || checker.isConsistent(BwithC, TC, TCp)) {
             return Collections.emptySet();
@@ -62,7 +62,7 @@ public class DirectDebug {
         else{ // else return C \ directDebug(C, B, T'π)
             incrementCounter(COUNTER_DIRECTDEBUG_CALLS);
             start(TIMER_FIRST);
-            Set<String> d = directDebug(C, B, TCp);
+            Set<String> d = directDebug(Collections.emptySet(), C, B, TCp);
             stop(TIMER_FIRST);
 
             incrementCounter(COUNTER_DIFFERENT_OPERATOR);
@@ -74,27 +74,32 @@ public class DirectDebug {
      * The implementation of DirectDebug algorithm.
      * The algorithm determines a maximal satisfiable subset MSS (Γ) of C U B U TC.
      *
-     * // Func DirectDebug(C = {c1..cn}, B, Tπ) : Γ
-     * // if IsConsistent(B U C, Tπ, T'π) return C;
+     * // Func DirectDebug(δ, C = {c1..cn}, B, Tπ) : Γ
+     * // T'π <- Tπ
+     * // if Δ != Φ and IsConsistent(B U C, Tπ, T'π) return C;
      * // if singleton(C) return Φ;
      * // k = n/2;
      * // C1 = {c1..ck}; C2 = {ck+1..cn};
-     * // Γ2 = DirectDebug(C1, B, T'π);
-     * // Γ1 = DirectDebug(C2, B U Γ2, T'π);
+     * // Γ2 = DirectDebug(δ=C1, C1, B, T'π);
+     * // Γ1 = DirectDebug(δ=C1-Γ2, C2, B U Γ2, T'π);
      * // return Γ1 ∪ Γ2;
      *
+     * @param δ check to skip redundant consistency checks
      * @param C a consideration set of constraints
      * @param B a background knowledge
      * @param TC a set of test cases which induce an inconsistency in C U B
      * @return a maximal satisfiable subset MSS of C U B U TC.
      */
-    private Set<String> directDebug(Set<String> C, Set<String> B, Set<String> TC) {
-        Set<String> TCp = new LinkedHashSet<>();
-        Set<String> BwithC = SetUtils.union(B, C); incrementCounter(COUNTER_UNION_OPERATOR);
+    private Set<String> directDebug(Set<String> δ, Set<String> C, Set<String> B, Set<String> TC) {
+        // T'π <- Tπ
+        Set<String> TCp = new LinkedHashSet<>(TC);
 
-        // if IsConsistent(B U C, Tπ, T'π) return C;
-        if (checker.isConsistent(BwithC, TC, TCp)) {
-            return C;
+        // if δ != Φ and IsConsistent(B U C, Tπ, T'π) return C;
+        if( !δ.isEmpty()) {
+            Set<String> BwithC = SetUtils.union(B, C); incrementCounter(COUNTER_UNION_OPERATOR);
+            if (checker.isConsistent(BwithC, TC, TCp)) {
+                return C;
+            }
         }
 
         // if singleton(C) return Φ;
@@ -111,18 +116,19 @@ public class DirectDebug {
         Set<String> C2 = new LinkedHashSet<>(secondSubList);
         incrementCounter(COUNTER_SPLIT_SET);
 
-        // Γ2 = DirectDebug(C1, B, T'π);
+        // Γ2 = DirectDebug(δ=C1, C1, B, T'π);
         incrementCounter(COUNTER_LEFT_BRANCH_CALLS);
         incrementCounter(COUNTER_DIRECTDEBUG_CALLS);
-        Set<String> Δ2 = directDebug(C1, B, TCp);
+        Set<String> Γ2 = directDebug(C1, C1, B, TCp);
 
-        // Γ1 = DirectDebug(C2, B U Γ2, T'π);
-        Set<String> BwithΔ2 = SetUtils.union(Δ2, B); incrementCounter(COUNTER_UNION_OPERATOR);
+        // Γ1 = DirectDebug(δ=C1-Γ2, C2, B U Γ2, T'π);
+        Set<String> BwithΓ2 = SetUtils.union(Γ2, B); incrementCounter(COUNTER_UNION_OPERATOR);
+        Set<String> C1minusΓ2 = SetUtils.difference(C1, Γ2); incrementCounter(COUNTER_DIFFERENT_OPERATOR);
         incrementCounter(COUNTER_RIGHT_BRANCH_CALLS);
         incrementCounter(COUNTER_DIRECTDEBUG_CALLS);
-        Set<String> Δ1 = directDebug(C2, BwithΔ2, TCp);
+        Set<String> Γ1 = directDebug(C1minusΓ2, C2, BwithΓ2, TCp);
 
         incrementCounter(COUNTER_UNION_OPERATOR);
-        return SetUtils.union(Δ1, Δ2);
+        return SetUtils.union(Γ1, Γ2);
     }
 }

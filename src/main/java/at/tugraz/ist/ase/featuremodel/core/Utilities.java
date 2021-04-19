@@ -8,9 +8,13 @@
 
 package at.tugraz.ist.ase.featuremodel.core;
 
+import at.tugraz.ist.ase.debugging.Configuration;
 import org.chocosolver.solver.Model;
 import org.chocosolver.solver.constraints.Constraint;
 
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -90,5 +94,14 @@ public class Utilities {
     public static void printConstraints(Model model) {
         List<Constraint> ac = Arrays.asList(model.getCstrs());
         ac.forEach(System.out::println);
+    }
+
+    public static void checkAndCreateFolder(String path) {
+        File folder = new File(path);
+
+        // check whether the fms folder does not exist
+        if (Files.notExists(Paths.get(path))) {
+            folder.mkdir(); // if not, create it
+        }
     }
 }

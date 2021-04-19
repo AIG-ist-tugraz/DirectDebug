@@ -1,11 +1,3 @@
-/* DirectDebug: Automated Testing and Debugging of Feature Models
- *
- * Copyright (C) 2020-2021  AIG team, Institute for Software Technology,
- * Graz University of Technology, Austria
- *
- * Contact: http://ase.ist.tugraz.at/ASE/
- */
-
 package at.tugraz.ist.ase.debugging;
 
 import at.tugraz.ist.ase.debugging.testcases.TestCasesClassifier;
@@ -18,47 +10,44 @@ import at.tugraz.ist.ase.featuremodel.parser.SXFMParser;
 
 import java.io.File;
 
-/**
- * Main app.
- *
- * @author Viet-Man Le (vietman.le@ist.tugraz.at)
- */
+import static at.tugraz.ist.ase.featuremodel.core.Utilities.checkAndCreateFolder;
+
 public class Main {
     public static void main(String[] args) throws Exception {
         if (args == null || args.length == 0 || args[0].equals("-h")) {
             help();
         } else {
-            switch (args[0]) {
-                case "-s": // statistics
-                    // dd -s ./data/fms statistics.txt
-                    if (args.length == 3) {
-                        FMStatistics stat = new FMStatistics(false, args[1], args[2]);
+            Configuration conf;
+            if (args.length == 2) {
+                conf = Configuration.getInstance(args[1]);
+
+                switch (args[0]) {
+                    case "-st": // statistics
+                        // [old version] d2bug_eval -st ./data/fms statistics.txt
+                        // d2bug_eval -st conf.txt
+                        // calculate the statistics for all feature models stored in "dataPath + /fms"
+                        // the results will be stored in "resultsPath + /statistics.txt"
+                        FMStatistics stat = new FMStatistics(false, conf);
                         stat.calculate();
-                    } else {
-                        help();
-                    }
-                    break;
-                case "-g": // feature model generating
-                    // dd -g 2 500 40 10000 ./data/fms
-                    if (args.length == 6) {
-                        FMGenerator.generate(Integer.parseInt(args[1]),
-                                Integer.parseInt(args[2]),
-                                Integer.parseInt(args[3]),
-                                Integer.parseInt(args[4]),
-                                args[5]);
-                    } else {
-                        help();
-                    }
-                    break;
-                case "-ts": // testsuite generation
-                    // dd -ts -g ./data/fms ./data/testsuite 1000 false
-                    if (args.length == 6 && args[1].equals("-g")) {
+                        break;
+                    case "-g": // feature model generating
+                        // [old version] d2bug_eval -g 2 500 40 10000 ./data/fms
+                        // d2bug_eval -g conf.txt
+                        // the generated feature models will be stored in "resultsPath + /fms"
+                        FMGenerator.generate(conf);
+                        break;
+                    case "-ts": // testsuite generation
+                        // [old version] d2bug_eval -ts -g ./data/fms ./data/testsuite 1000 false
+                        // d2bug_eval -ts conf1.txt
+                        // The feature models have to store in "dataPath + /fms"
+                        // Generated testsuites will be stored in "resultsPath + /testsuite"
                         SXFMParser parser = new SXFMParser();
 
-                        File folder = new File(args[2]);
-                        String pathtoSave = args[3];
-                        int maxCombinations = Integer.parseInt(args[4]);
-                        boolean randomlySearch = Boolean.parseBoolean(args[5]);
+                        File folder = new File(conf.getFMSPathInData());
+                        String pathtoSave = conf.getTestSuitePathInResults();
+                        checkAndCreateFolder(pathtoSave);
+                        int maxCombinations = 10000;
+                        boolean randomlySearch = false;
 
                         // Takes each file in the folder
                         for (final File file : folder.listFiles()) {
@@ -77,47 +66,47 @@ public class Main {
                                 System.out.println("Done - " + file.getName());
                             }
                         }
-                    } else {
-                        help();
-                    }
-                    break;
-                case "-tc":
-                    if (args.length == 3 && args[1].equals("-c")) { // classifies test cases
-                        // dd -tc -c ./data/configurations.csv
-                        TestCasesClassifier classification = new TestCasesClassifier(args[2]);
+                        break;
+                    case "-tc": // test case classification
+                        // [old version] d2bug_eval -tc -c ./data/configurations.csv
+                        // d2bug_eval -tc conf.txt
+                        // The feature models have to store in "dataPath + /fms"
+                        // The testsuites have to store in "dataPath + /testsuite"
+                        // Classified testsuites will be stored in "resultsPath + /classifiedTS"
+                        checkAndCreateFolder(conf.getClassifiedTSPathInResults());
+                        TestCasesClassifier classification = new TestCasesClassifier(conf);
                         classification.classify();
-                    } else if (args.length == 5 && args[1].equals("-s")) { // selects test cases
-                        // dd -tc -s ./data/configurations.csv 5 0.3
-                        int numScenarios = Integer.parseInt(args[3]);
-                        double violatedPercent = Double.parseDouble(args[4]);
-
-                        TestCasesSelector selector = new TestCasesSelector(args[2]);
-                        selector.select(numScenarios, violatedPercent);
-                    } else {
-                        help();
-                    }
-                    break;
-                case "-e":
-                    if (args.length == 3) {
-                        // dd -e ./data/conf/conf.csv ./data/results2.txt
-                        DirectDebugEvaluation evaluator = new DirectDebugEvaluation(args[1], args[2]);
+                        break;
+                    case "-ss": // scenario selection
+                        // [old version] d2bug_eval -tc -s ./data/configurations.csv 3 0.3
+                        // d2bug_eval -ss conf.txt
+                        // The classified testsuites have to store in "dataPath + /classifiedTS"
+                        // Scenarios will be stored in "resultsPath + /scenarios"
+                        checkAndCreateFolder(conf.getScenariosPathInResults());
+                        TestCasesSelector selector = new TestCasesSelector(conf);
+                        selector.select(conf.getNumIter(), conf.getPerViolated_nonViolated());
+                        break;
+                    case "-e": // DirectDebug evaluation
+                        // [old version] d2bug_eval -e ./data/conf/conf.csv ./data/results2.txt
+                        // d2bug_eval -e conf.txt
+                        DirectDebugEvaluation evaluator = new DirectDebugEvaluation(conf);
                         evaluator.evaluate();
-                    } else {
-                        help();
-                    }
-                    break;
+                        break;
+                }
+            } else {
+                help();
             }
         }
     }
 
     private static void help() {
-        System.out.println("DirectDebug Evaluation");
-        System.out.println("Help: dd -h");
-        System.out.println("FMStatistics: dd -s <folder path> <output file path>");
-        System.out.println("FM generation: dd -g <#feature models> <#features> <%CTC> <#max products> <path to save>");
-        System.out.println("Testsuite generation: dd -ts -g <folder path> <path to save> <#max combinations> <randomly search>");
-        System.out.println("Test cases classification: dd -tc -c <configuration file>");
-        System.out.println("Test cases selection: dd -tc -s <configuration file> <#scenarios> <%violated test cases>");
-        System.out.println("DirectDebug evaluation: dd -e <configuration file>");
+        System.out.println("d2bug_eval - DirectDebug Evaluation");
+        System.out.println("Help: d2bug_eval -h");
+        System.out.println("FMStatistics: d2bug_eval -st <configuration file>");
+        System.out.println("FM generation: d2bug_eval -g <configuration file>");
+        System.out.println("Testsuite generation: d2bug_eval -ts <configuration file>");
+        System.out.println("Test case classification: d2bug_eval -tc <configuration file>");
+        System.out.println("Scenario selection: d2bug_eval -ss <configuration file>");
+        System.out.println("DirectDebug evaluation: d2bug_eval -e <configuration file>");
     }
 }

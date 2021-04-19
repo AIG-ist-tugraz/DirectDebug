@@ -9,10 +9,10 @@
 package at.tugraz.ist.ase.featuremodel.apps;
 
 import at.tugraz.ist.ase.MBDiagLib.model.KBModel;
+import at.tugraz.ist.ase.debugging.Configuration;
 import at.tugraz.ist.ase.debugging.DebuggingModel;
 import at.tugraz.ist.ase.featuremodel.core.FeatureModel;
 import at.tugraz.ist.ase.featuremodel.core.Relationship;
-import at.tugraz.ist.ase.featuremodel.parser.ParserException;
 import at.tugraz.ist.ase.featuremodel.parser.SXFMParser;
 
 import java.io.BufferedWriter;
@@ -28,26 +28,23 @@ import java.io.IOException;
 public class FMStatistics {
 
     Boolean filter;
-    String folderPath;
-    String outputFilePath;
+
+    Configuration conf;
 
     /**
      * A constructor with a folder's path which stores feature model's files,
      * and the output file's path which will save the statistics.
-     * @param filter
-     * @param folderPath
-     * @param outputFilePath
+     * @param filter filter out wrong feature models, i.e., no mandatory relationship
      */
-    public FMStatistics(Boolean filter, String folderPath, String outputFilePath) {
+    public FMStatistics(Boolean filter, Configuration conf) {
         this.filter = filter;
-        this.folderPath = folderPath;
-        this.outputFilePath = outputFilePath;
+        this.conf = conf;
     }
 
     public void calculate() throws IOException {
-        File folder = new File(folderPath);
+        File folder = new File(conf.getFMSPathInData());
         SXFMParser parser = new SXFMParser();
-        BufferedWriter writer = new BufferedWriter(new FileWriter(outputFilePath));
+        BufferedWriter writer = new BufferedWriter(new FileWriter(conf.getResultPath() + "/statistics.txt"));
 
         int count = 0;
         for (final File file : folder.listFiles()) {
@@ -64,6 +61,14 @@ public class FMStatistics {
 
                     double ctc = (double)featureModel.getNumOfConstraints() / model.getAllConstraints().size();
 
+                    // filter out wrong feature models, for example,
+                    // inconsistent
+                    // don't have any constraints
+                    // don't have any mandatory relationships
+                    // don't have any optional relationships
+                    // don't have any alternative relationships
+                    // don't have any or relationships
+                    // the ratio between cross-tree constraints and all constraints is less than 0.1
                     if (filter
                             && (!featureModel.isConsistency()
                             || featureModel.getNumOfConstraints() == 0
@@ -96,7 +101,6 @@ public class FMStatistics {
             }
         }
 
-        System.out.println(count);
         writer.close();
     }
 }

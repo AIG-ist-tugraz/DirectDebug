@@ -14,6 +14,7 @@ import java.util.Collections;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import static at.tugraz.ist.ase.MBDiagLib.core.DebugConfigurations.showDebugs;
 import static at.tugraz.ist.ase.MBDiagLib.core.DebugConfigurations.showEvaluations;
 
 /**
@@ -27,6 +28,7 @@ public class PerformanceMeasurement {
     public static final String COUNTER_INFEASIBLE = "isfeasible";
     public static final String COUNTER_DIRECTDEBUG_CALLS = "directdebug.calls";
     public static final String COUNTER_CONSISTENCY_CHECKS = "consistency.checks";
+    public static final String COUNTER_CHOCO_SOLVER_CALLS = "choco.solver.calls";
     public static final String COUNTER_SIZE_CONSISTENCY_CHECKS = "constraints.consistency.checks";
     public static final String COUNTER_UNION_OPERATOR = "union.operator";
     public static final String COUNTER_ADD_OPERATOR = "add.operator";
@@ -146,50 +148,41 @@ public class PerformanceMeasurement {
     public static void printEvaluations(int itNumber, BufferedWriter writer) throws IOException {
 
         if (showEvaluations) {
-//            System.out.println("\t\tThe number of DEBUG calls:" + (getCounter(COUNTER_DEBUG_CALLS).getValue() / itNumber));
-            writer.write("\t\t\tThe number of DEBUG calls:" + (getCounter(COUNTER_DIRECTDEBUG_CALLS).getValue() / itNumber) + "\n");
-
-//            System.out.println("\t\tThe number of Consistency checks:" + (getCounter(COUNTER_CONSISTENCY_CHECKS).getValue() / itNumber));
+            writer.write("\t\t\tThe number of DirectDebug calls:" + (getCounter(COUNTER_DIRECTDEBUG_CALLS).getValue() / itNumber) + "\n");
             writer.write("\t\t\tThe number of Consistency checks:" + (getCounter(COUNTER_CONSISTENCY_CHECKS).getValue() / itNumber) + "\n");
-
-//            System.out.println("\t\tThe number of consistent:" + (getCounter(COUNTER_FEASIBLE).getValue() / itNumber));
+            writer.write("\t\t\tThe number of Choco Solver calls:" + (getCounter(COUNTER_CHOCO_SOLVER_CALLS).getValue() / itNumber) + "\n");
             writer.write("\t\t\tThe number of consistent:" + (getCounter(COUNTER_FEASIBLE).getValue() / itNumber) + "\n");
-
-//            System.out.println("\t\tThe number of INconsistent:" + (getCounter(COUNTER_INFEASIBLE).getValue() / itNumber));
             writer.write("\t\t\tThe number of INconsistent:" + (getCounter(COUNTER_INFEASIBLE).getValue() / itNumber) + "\n");
-
-//            System.out.println("\t\tThe size of Consistency checks:" + (getCounter(COUNTER_SIZE_CONSISTENCY_CHECKS).getValue() / itNumber));
             writer.write("\t\t\tThe size of Consistency checks:" + (getCounter(COUNTER_SIZE_CONSISTENCY_CHECKS).getValue() / itNumber) + "\n");
-
-//            System.out.println("\t\tThe number of union:" + (getCounter(COUNTER_UNION_OPERATOR).getValue() / itNumber));
             writer.write("\t\t\tThe number of union:" + (getCounter(COUNTER_UNION_OPERATOR).getValue() / itNumber) + "\n");
-
-//            System.out.println("\t\tThe number of add:" + (getCounter(COUNTER_ADD_OPERATOR).getValue() / itNumber));
             writer.write("\t\t\tThe number of add:" + (getCounter(COUNTER_ADD_OPERATOR).getValue() / itNumber) + "\n");
-
-//            System.out.println("\t\tThe number of different:" + (getCounter(COUNTER_DIFFERENT_OPERATOR).getValue() / itNumber));
             writer.write("\t\t\tThe number of different:" + (getCounter(COUNTER_DIFFERENT_OPERATOR).getValue() / itNumber) + "\n");
-
-//            System.out.println("\t\tThe number of split set:" + (getCounter(COUNTER_SPLIT_SET).getValue() / itNumber));
             writer.write("\t\t\tThe number of split set:" + (getCounter(COUNTER_SPLIT_SET).getValue() / itNumber) + "\n");
-
-//            System.out.println("\t\tThe number of left branch calls:" + (getCounter(COUNTER_LEFT_BRANCH_CALLS).getValue() / itNumber));
             writer.write("\t\t\tThe number of left branch calls:" + (getCounter(COUNTER_LEFT_BRANCH_CALLS).getValue() / itNumber) + "\n");
-
-//            System.out.println("\t\tThe number of right branch calls:" + (getCounter(COUNTER_RIGHT_BRANCH_CALLS).getValue() / itNumber));
             writer.write("\t\t\tThe number of right branch calls:" + (getCounter(COUNTER_RIGHT_BRANCH_CALLS).getValue() / itNumber) + "\n");
-
-//            System.out.println("\t\tThe number of unpost constraints:" + (getCounter(COUNTER_UNPOST_CONSTRAINT).getValue() / itNumber));
             writer.write("\t\t\tThe number of unpost constraints:" + (getCounter(COUNTER_UNPOST_CONSTRAINT).getValue() / itNumber) + "\n");
-
-//            System.out.println("\t\tThe number of post constraints:" + (getCounter(COUNTER_POST_CONSTRAINT).getValue() / itNumber));
             writer.write("\t\t\tThe number of post constraints:" + (getCounter(COUNTER_POST_CONSTRAINT).getValue() / itNumber) + "\n");
-
-//            System.out.println("\t\tThe number of contains calls:" + (getCounter(COUNTER_CONSTAINS_CONSTRAINT).getValue() / itNumber));
             writer.write("\t\t\tThe number of contains calls:" + (getCounter(COUNTER_CONSTAINS_CONSTRAINT).getValue() / itNumber) + "\n");
-
-//            System.out.println("\t\t\tTime for first: " + ((double)getTimer(TIMER_FIRST).total() / 1_000_000_000.0 / itNumber));
             writer.write("\t\t\tTime for first: " + ((double)getTimer(TIMER_FIRST).total() / 1_000_000_000.0 / itNumber) + "\n");
+        }
+
+        if (showDebugs) {
+            System.out.println("\t\t\tThe number of DirectDebug calls:" + (getCounter(COUNTER_DIRECTDEBUG_CALLS).getValue() / itNumber));
+            System.out.println("\t\t\tThe number of Consistency checks:" + (getCounter(COUNTER_CONSISTENCY_CHECKS).getValue() / itNumber));
+            System.out.println("\t\t\tThe number of Choco Solver calls:" + (getCounter(COUNTER_CHOCO_SOLVER_CALLS).getValue() / itNumber));
+            System.out.println("\t\t\tThe number of consistent:" + (getCounter(COUNTER_FEASIBLE).getValue() / itNumber));
+            System.out.println("\t\t\tThe number of INconsistent:" + (getCounter(COUNTER_INFEASIBLE).getValue() / itNumber));
+            System.out.println("\t\t\tThe size of Consistency checks:" + (getCounter(COUNTER_SIZE_CONSISTENCY_CHECKS).getValue() / itNumber));
+            System.out.println("\t\t\tThe number of union:" + (getCounter(COUNTER_UNION_OPERATOR).getValue() / itNumber));
+            System.out.println("\t\t\tThe number of add:" + (getCounter(COUNTER_ADD_OPERATOR).getValue() / itNumber));
+            System.out.println("\t\t\tThe number of different:" + (getCounter(COUNTER_DIFFERENT_OPERATOR).getValue() / itNumber));
+            System.out.println("\t\t\tThe number of split set:" + (getCounter(COUNTER_SPLIT_SET).getValue() / itNumber));
+            System.out.println("\t\t\tThe number of left branch calls:" + (getCounter(COUNTER_LEFT_BRANCH_CALLS).getValue() / itNumber));
+            System.out.println("\t\t\tThe number of right branch calls:" + (getCounter(COUNTER_RIGHT_BRANCH_CALLS).getValue() / itNumber));
+            System.out.println("\t\t\tThe number of unpost constraints:" + (getCounter(COUNTER_UNPOST_CONSTRAINT).getValue() / itNumber));
+            System.out.println("\t\t\tThe number of post constraints:" + (getCounter(COUNTER_POST_CONSTRAINT).getValue() / itNumber));
+            System.out.println("\t\t\tThe number of contains calls:" + (getCounter(COUNTER_CONSTAINS_CONSTRAINT).getValue() / itNumber));
+            System.out.println("\t\t\tTime for first: " + ((double)getTimer(TIMER_FIRST).total() / 1_000_000_000.0 / itNumber));
         }
     }
 }
