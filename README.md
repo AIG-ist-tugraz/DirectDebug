@@ -104,20 +104,22 @@ then open Maven window (*View/Tool Windows/Maven*) and double-click on 7 configu
 
 The software package supports a wide range of parameters as follows:
 
-- ```showEvaluation```: (**true**|**false**) determines whether the program prints out the results to the console and the *results.txt* file.
-- ```showDebug```: (**true**|**false**) determines whether the program prints out the information messages to the console and the *results.txt* file.
-- ```CF```: a list of the numbers of constraints |CF|.
-- ```TC```: a list of the numbers of test cases |Tπ|.
-- ```numGenFM```: the number of feature model generated for each number of constraints |CF|.
-- ```CTC```: the ratio of cross-tree constraints which generated feature models has to be attained.
-- ```numIter```: the number of iterations |iter|.
-- ```perViolated_nonViolated```: the percentage of violated test cases to non-violated test cases.
-- ```dataPath```: the folder where the dataset is stored.
-- ```resultsPath```: the folder where the results will be saved.
+- ```showEvaluation```: (**false** by default) determines whether the program prints out the results to the console and the *results.txt* file.
+- ```showDebug```: (**false** by default) determines whether the program prints out the information messages to the console and the *results.txt* file.
+- ```CF```: (**10,20,50,100,500,1000** by default) a list of the numbers of constraints |CF|.
+- ```TC```: (**5,10,25,50,100,250,500** by default) a list of the numbers of test cases |Tπ|.
+- ```numGenFM```: (**3** by default) the number of feature model generated for each number of constraints |CF|.
+- ```CTC```: (**0.4** by default) the ratio of cross-tree constraints which generated feature models has to be attained.
+- ```numIter```: (**3** by default) the number of iterations |iter|.
+- ```perViolated_nonViolated```: (**0.3** by default) the percentage of violated test cases to non-violated test cases.
+- ```dataPath```: (**./data/** by default) the folder where the dataset is stored.
+- ```resultsPath```: (**./results/** by default) the folder where the results will be saved.
 
 For further details on configuring these parameters, we refer to three example configuration files, **confForPaper.txt**, **conf1.1.txt**, **conf1.2.txt**. **confForPaper.txt** is used by **run.sh**, and two remaining files are used by **run_all.sh**.
 
-## How to use the code source for your project
+## Use the code source for your project
+
+[An example of using DirectDebug algorithm for testing and debugging in feature models](https://github.com/AIG-ist-tugraz/DirectDebug/blob/main/src/test/java/at/tugraz/ist/ase/debugging/DirectDebugV1Test.java)
 
 **d2bug_eval** consists of three sub-packages: **Feature Model**, **MBDiagLib**, and **Debugging**.  **Feature Model** reads feature model files and supports *feature model generation* and *feature model statistics*. **MBDiagLib** provides (1) an abstract model to hold variables and constraints, (2) an abstract consistency checker for underlying solvers, (3) a *Choco* consistency checker using [Choco Solver](https://choco-solver.org), and (4) functions to measure the performance of algorithms in terms of run-time or the number of solver calls. **Debugging** provides components w.r.t. test-cases management, the DirectDebug implementation, a debugging model with test-cases integration, and debugging-related applications (e.g. *test suite generation*, *test cases classification*, and *test case selection*).
 
