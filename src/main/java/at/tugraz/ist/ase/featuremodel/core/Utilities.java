@@ -8,7 +8,6 @@
 
 package at.tugraz.ist.ase.featuremodel.core;
 
-import at.tugraz.ist.ase.debugging.Configuration;
 import org.chocosolver.solver.Model;
 import org.chocosolver.solver.constraints.Constraint;
 

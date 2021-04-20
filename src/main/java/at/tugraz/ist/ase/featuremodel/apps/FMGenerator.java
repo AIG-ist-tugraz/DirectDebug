@@ -8,9 +8,14 @@
 
 package at.tugraz.ist.ase.featuremodel.apps;
 
+import at.tugraz.ist.ase.MBDiagLib.model.KBModel;
 import at.tugraz.ist.ase.debugging.Configuration;
+import at.tugraz.ist.ase.debugging.DebuggingModel;
+import at.tugraz.ist.ase.featuremodel.core.FeatureModel;
+import at.tugraz.ist.ase.featuremodel.parser.SXFMParser;
 import es.us.isa.FAMA.models.FAMAfeatureModel.FAMAFeatureModel;
 import es.us.isa.FAMA.models.variabilityModel.VariabilityModel;
+import es.us.isa.generator.FM.AbstractFMGenerator;
 import es.us.isa.generator.FM.Evolutionay.EvolutionaryFMGenerator;
 import es.us.isa.generator.FM.Evolutionay.FitnessFunction;
 import es.us.isa.generator.FM.GeneratorCharacteristics;
@@ -44,38 +49,98 @@ public class FMGenerator {
         String path = conf.getFMSPathInResults();
         checkAndCreateFolder(path);
 
-        for (int numFeatures: conf.getCardCF()) {
+        SXFMParser parser = new SXFMParser();
+        int numCstrs;
+
+        for (int numConstraints: conf.getCardCF()) {
             for (int i = 0; i < conf.getNumGenFM(); i++) {
-                String FMname = conf.createFMName(numFeatures, i);
+                String FMname = conf.createFMName(numConstraints, i);
+                String filename = conf.getFMSFilenameInResults(numConstraints, i);
 
-                // STEP 1: Specify the user's preferences for the generation (characteristics)
-                GeneratorCharacteristics characteristics = new GeneratorCharacteristics();
-                characteristics.setNumberOfFeatures(numFeatures);            // Number of features.
-                characteristics.setPercentageCTC((int) (conf.getRatioCTC() * 100));                // Percentage of constraints.
+                System.out.println(FMname);
 
-                // Max number of products of the feature model to be generated. Too large values could cause memory overflows or the program getting stuck.
-                characteristics.setMaxProducts(10000);
+                int numFeatures = numConstraints / 2 + 1;
+                int count = 0;
+                if (numFeatures < 10) { // for numFeatures < 10, using Random generation
+                    do {
+                        count++;
+                        System.out.println("Try " + count);
 
-                characteristics.setModelName(FMname);
+                        // STEP 1: Specify the user's preferences for the generation (characteristics)
+                        GeneratorCharacteristics characteristics = new GeneratorCharacteristics();
+                        characteristics.setNumberOfFeatures(numFeatures); // Number of features.
+                        characteristics.setPercentageCTC(30);
+                        // Max number of products of the feature model to be generated. Too large values could cause memory overflows or the program getting stuck.
+                        characteristics.setMaxProducts(10000);
 
-                // STEP 2: Generate the model with the specific characteristics (FaMa FM metamodel is used)
-                EvolutionaryFMGenerator generator = new EvolutionaryFMGenerator();
+                        characteristics.setModelName(FMname);
 
-                //STEP 2.3: Set the fitness function for the genetic algorithm and the max number of generations allowed
-                generator.setFitnessFunction(new BranchFitness());
-//                generator.setFitnessFunction(new CTCFitness());
-                generator.setMaximize(false);
-                generator.setMaxGenerations(20);
+                        AbstractFMGenerator generator = new es.us.isa.generator.FM.FMGenerator();
+                        FAMAFeatureModel fm = (FAMAFeatureModel) generator.generateFM(characteristics);
 
-                VariabilityModel geneticg = generator.generateFM(characteristics);
+                        // STEP 3: Save the model and the products
+                        FMWriter writer = new FMWriter();
+                        writer.saveFM(fm, filename);
 
-                // STEP 3: Save the model and the products
-                String filename = conf.getFMSFilenameInResults(numFeatures, i);
+                        addFMName(filename, FMname); // add header
 
-                FMWriter writer = new FMWriter();
-                writer.saveFM(geneticg, filename);
+                        // check the number of Choco constraints
+                        File file = new File(filename);
+                        FeatureModel featureModel = parser.parse(file);
+                        KBModel model = new DebuggingModel(featureModel, null);
 
-                addFMName(filename, FMname);
+                        numCstrs = model.getAllConstraints().size();
+
+                        if ((numConstraints + 1) != numCstrs) {
+                            // delete file
+                            file.delete();
+                        }
+                    } while ((numConstraints + 1) != numCstrs);
+                } else { // for numFeatures >= 10, using an evolutionary generator
+                    do {
+                        count++;
+                        System.out.println("Try " + count);
+
+                        // STEP 1: Specify the user's preferences for the generation (characteristics)
+                        GeneratorCharacteristics characteristics = new GeneratorCharacteristics();
+                        characteristics.setNumberOfFeatures(numFeatures); // Number of features.
+                        characteristics.setPercentageCTC((int) (conf.getRatioCTC() * 100));
+                        // Max number of products of the feature model to be generated. Too large values could cause memory overflows or the program getting stuck.
+                        characteristics.setMaxProducts(10000);
+
+                        characteristics.setModelName(FMname);
+
+                        // STEP 2: Generate the model with the specific characteristics (FaMa FM metamodel is used)
+                        EvolutionaryFMGenerator generator = new EvolutionaryFMGenerator();
+
+                        //STEP 2.3: Set the fitness function for the genetic algorithm and the max number of generations allowed
+                        generator.setFitnessFunction(new BranchFitness());
+//                        generator.setFitnessFunction(new CTCFitness());
+                        generator.setMaximize(true);
+                        generator.setMaxGenerations(20);
+
+                        VariabilityModel geneticg = generator.generateFM(characteristics);
+
+                        // STEP 3: Save the model and the products
+                        FMWriter writer = new FMWriter();
+                        writer.saveFM(geneticg, filename);
+
+                        addFMName(filename, FMname); // add header
+
+                        // check the number of Choco constraints
+                        File file = new File(filename);
+                        FeatureModel featureModel = parser.parse(file);
+                        KBModel model = new DebuggingModel(featureModel, null);
+
+                        numCstrs = model.getAllConstraints().size();
+
+                        if ((numConstraints + 1) != numCstrs) {
+                            // delete file
+                            file.delete();
+                        }
+                    } while ((numConstraints + 1) != numCstrs);
+                }
+                System.out.println("DONE - " + FMname);
             }
         }
     }

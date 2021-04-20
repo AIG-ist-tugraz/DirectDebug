@@ -18,6 +18,7 @@ import at.tugraz.ist.ase.featuremodel.core.FeatureModel;
 import at.tugraz.ist.ase.featuremodel.core.FeatureModelException;
 import at.tugraz.ist.ase.featuremodel.parser.ParserException;
 import at.tugraz.ist.ase.featuremodel.parser.SXFMParser;
+import com.opencsv.CSVReader;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -47,11 +48,11 @@ public class TestCasesClassifier {
     public void classify() throws IOException, ParserException, FeatureModelException {
         SXFMParser parser = new SXFMParser();
 
-        for (int numFeatures: conf.getCardCF()) {
+        for (int numConstraints: conf.getCardCF()) {
             for (int i = 0; i < conf.getNumGenFM(); i++) {
-                File fileFM = new File(conf.getFMSFilenameInData(numFeatures, i)); // feature model
-                File fileTS = new File(conf.getTestSuiteFilenameInData(numFeatures, i)); // testsuite
-                File fileCTS = new File(conf.getClassifiedTSFilenameInResults(numFeatures, i)); // classified testsuite
+                File fileFM = new File(conf.getFMSFilenameInData(numConstraints, i)); // feature model
+                File fileTS = new File(conf.getTestSuiteFilenameInData(numConstraints, i)); // testsuite
+                File fileCTS = new File(conf.getClassifiedTSFilenameInResults(numConstraints, i)); // classified testsuite
 
                 System.out.println("Feature model: " + fileFM.getName());
                 System.out.println("Testsuite: " + fileTS.getName());

@@ -70,18 +70,18 @@ public class DirectDebugEvaluation {
             else if (count == 1)
                 System.out.println("\tMeasuring the runtime...");
 
-            for (int numFeatures: conf.getCardCF()) {
+            for (int numConstraints: conf.getCardCF()) {
                 int indexRow = 0;
                 for (int numTS: conf.getCardTS()) {
 
                     for (int i = 0; i < conf.getNumGenFM(); i++) {
-                        File fileFM = new File(conf.getFMSFilenameInData(numFeatures, i));
+                        File fileFM = new File(conf.getFMSFilenameInData(numConstraints, i));
 
                         // take #iter scenarios
                         for (int j = 0; j < conf.getNumIter(); j++) {
                             FeatureModel featureModel = parser.parse(fileFM);
 
-                            File fileTC = new File(conf.getScenariosFilenameInData(numFeatures, i, numTS, j));
+                            File fileTC = new File(conf.getScenariosFilenameInData(numConstraints, i, numTS, j));
                             TestSuite testSuite = new TestSuite(fileTC);
 
                             System.out.print("\t\t" + fileFM.getName().toUpperCase());

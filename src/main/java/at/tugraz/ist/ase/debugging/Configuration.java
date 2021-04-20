@@ -1,3 +1,11 @@
+/* DirectDebug: Automated Testing and Debugging of Feature Models
+ *
+ * Copyright (C) 2020-2021  AIG team, Institute for Software Technology,
+ * Graz University of Technology, Austria
+ *
+ * Contact: http://ase.ist.tugraz.at/ASE/
+ */
+
 package at.tugraz.ist.ase.debugging;
 
 import java.io.BufferedReader;
@@ -8,6 +16,11 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * Stores parameters of the program
+ *
+ * @author Viet-Man Le (vietman.le@ist.tugraz.at)
+ */
 public class Configuration {
     private boolean showEvaluation = true;
     private boolean showDebug = true;
@@ -96,38 +109,38 @@ public class Configuration {
         return resultPath + "scenarios";
     }
 
-    public String createFMName(int numFeatures, int count) {
-        String name = "FM_" + numFeatures + "_" + count;
+    public String createFMName(int numConstraints, int count) {
+        String name = "FM_" + numConstraints + "_" + count;
         return name;
     }
 
-    public String getFMSFilenameInResults(int numFeatures, int count) {
-        String filename = getFMSPathInResults() + "/" + createFMName(numFeatures, count) + ".splx";
+    public String getFMSFilenameInResults(int numConstraints, int count) {
+        String filename = getFMSPathInResults() + "/" + createFMName(numConstraints, count) + ".splx";
         return filename;
     }
 
-    public String getFMSFilenameInData(int numFeatures, int count) {
-        String filename = getFMSPathInData() + "/" + createFMName(numFeatures, count) + ".splx";
+    public String getFMSFilenameInData(int numConstraints, int count) {
+        String filename = getFMSPathInData() + "/" + createFMName(numConstraints, count) + ".splx";
         return filename;
     }
 
-    public String getTestSuiteFilenameInData(int numFeatures, int count) {
-        String filename = getTestSuitePathInData() + "/FM_" + numFeatures + "_" + count + ".testsuite";
+    public String getTestSuiteFilenameInData(int numConstraints, int count) {
+        String filename = getTestSuitePathInData() + "/FM_" + numConstraints + "_" + count + ".testsuite";
         return filename;
     }
 
-    public String getClassifiedTSFilenameInResults(int numFeatures, int count) {
-        String filename = getClassifiedTSPathInResults() + "/FM_" + numFeatures + "_" + count + ".classifiedts";
+    public String getClassifiedTSFilenameInResults(int numConstraints, int count) {
+        String filename = getClassifiedTSPathInResults() + "/FM_" + numConstraints + "_" + count + ".classifiedts";
         return filename;
     }
 
-    public String getClassifiedTSFilenameInData(int numFeatures, int count) {
-        String filename = getClassifiedTSPathInData() + "/FM_" + numFeatures + "_" + count + ".classifiedts";
+    public String getClassifiedTSFilenameInData(int numConstraints, int count) {
+        String filename = getClassifiedTSPathInData() + "/FM_" + numConstraints + "_" + count + ".classifiedts";
         return filename;
     }
 
-    public String getScenariosFilenameInData(int numFeatures, int count, int numTS, int iter) {
-        String filename = getScenariosPathInData() + "/FM_" + numFeatures + "_" + count + "_c" + numTS + "_" + iter + ".testcases";
+    public String getScenariosFilenameInData(int numConstraints, int count, int numTS, int iter) {
+        String filename = getScenariosPathInData() + "/FM_" + numConstraints + "_" + count + "_c" + numTS + "_" + iter + ".testcases";
         return filename;
     }
 

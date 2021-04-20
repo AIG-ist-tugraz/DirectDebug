@@ -35,9 +35,9 @@ public class TestCasesSelector {
     public void select(int numScenarios, double violatedPercent) throws IOException {
 
         // Take each file in datasets/
-        for (int numFeatures: conf.getCardCF()) {
+        for (int numConstraints: conf.getCardCF()) {
             for (int i = 0; i < conf.getNumGenFM(); i++) {
-                File fileTS = new File(conf.getClassifiedTSFilenameInData(numFeatures, i)); // classified testsuite
+                File fileTS = new File(conf.getClassifiedTSFilenameInData(numConstraints, i)); // classified testsuite
                 String pathTestCases = conf.getScenariosPathInResults(); // path to where stores test cases
 
                 System.out.println("Testsuite: " + fileTS.getName());
