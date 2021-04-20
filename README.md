@@ -77,7 +77,7 @@ For further details of this app, we refer to [d2bug_eval.jar guideline](https://
 
 #### Use a bash script
 
-We provide two bash scripts that perform all necessary steps from *compiling the source code* to *running the DirectDebug evaluation process*. In particular, **run.sh** will compile the source files, package them in one *jar* file, and run the DirectDebug evaluation with the dataset used for the paper. Besides compiling and packaging the source files, **run_all.sh** will carry out all five steps of the DirectDebug evaluation process, and you will get the new dataset, new results. However, when **run_all.sh** activates the feature model generation, an error may occur, i.e., it's a time-out error of [Betty framework](https://www.isa.us.es/betty/welcome). Thus, if you want to generate a new dataset, the best way is using our software package **d2bug_eval.jar** to run step by step the evaluation process.
+We provide two bash scripts that perform all necessary steps from *compiling the source code* to *running the DirectDebug evaluation process*. In particular, **run.sh** will compile the source files, package them in one *jar* file, and run the DirectDebug evaluation with the dataset used for the paper. Besides compiling and packaging the source files, **run_all.sh** will carry out all five steps of the DirectDebug evaluation process, and you will get the new dataset, new results.
 
 To run these bash scripts on your system after cloning the source code:
 
