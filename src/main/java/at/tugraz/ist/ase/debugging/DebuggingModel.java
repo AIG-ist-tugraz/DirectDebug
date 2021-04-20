@@ -82,8 +82,8 @@ public class DebuggingModel extends KBModel {
         this.setCorrectConstraints(B);
 
         // check the consistency of the knowledge base
-//        featureModel.setConsistency(model.getSolver().solve());
-//        model.getSolver().reset();
+        featureModel.setConsistency(model.getSolver().solve());
+        model.getSolver().reset();
 
         // translates test cases to Choco constraints
         if (testSuite != null) {
