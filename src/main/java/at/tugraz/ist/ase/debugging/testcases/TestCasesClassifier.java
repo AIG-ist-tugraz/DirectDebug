@@ -78,11 +78,11 @@ public class TestCasesClassifier {
                     if (checker.isConsistent(C, tc.toString())) {
                         totalNonViolatedTC += 1;
                         nonviolatedTestCases.add(tc.toString());
-                        tc.setViolated(true);
+                        tc.setViolated(false);
                     } else {
                         totalViolatedTC += 1;
                         violatedTestCases.add(tc.toString());
-                        tc.setViolated(false);
+                        tc.setViolated(true);
                     }
                 }
 
