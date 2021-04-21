@@ -95,6 +95,8 @@ public class DirectDebug {
         // if δ != Φ and IsConsistent(B U C, Tπ, T'π) return C;
         if( !δ.isEmpty()) {
             Set<String> BwithC = SetUtils.union(B, C); incrementCounter(COUNTER_UNION_OPERATOR);
+
+            incrementCounter(COUNTER_CONSISTENCY_CHECKS);
             if (checker.isConsistent(BwithC, TC, TCp)) {
                 return C;
             }

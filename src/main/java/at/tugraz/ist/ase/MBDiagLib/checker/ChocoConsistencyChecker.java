@@ -99,7 +99,6 @@ public class ChocoConsistencyChecker implements IConsistencyChecker {
      * the given set of constraints {@param C}, otherwise false.
      */
     public boolean isConsistent(Collection<String> C, Collection<String> TC, Collection<String> TCp) {
-        incrementCounter(COUNTER_CONSISTENCY_CHECKS);
         boolean consistent = true;
         for (String tc: TC) {
             if (!isConsistent(C, tc)) {
