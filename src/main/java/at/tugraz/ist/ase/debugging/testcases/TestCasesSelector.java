@@ -105,6 +105,11 @@ public class TestCasesSelector {
     }
 
     private void readTestSuite(File fileTS) {
+        violatedTestCases.clear();
+        nonviolatedTestCases.clear();
+        totalViolatedTestCases = 0;
+        totalNonViolatedTestCases = 0;
+
         BufferedReader reader;
         String line;
         try {

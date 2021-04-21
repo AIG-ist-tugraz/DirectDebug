@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01e647dc-89e0-4f4b-ac29-3295b124815f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/tugraz/ist/ase/debugging/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/tugraz/ist/ase/debugging/Configuration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/tugraz/ist/ase/debugging/DirectDebugEvaluation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/tugraz/ist/ase/debugging/DirectDebugEvaluation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/tugraz/ist/ase/debugging/testcases/TestCasesClassifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/tugraz/ist/ase/debugging/testcases/TestCasesClassifier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/tugraz/ist/ase/debugging/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/tugraz/ist/ase/debugging/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/at/tugraz/ist/ase/debugging/testcases/TestCasesSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/tugraz/ist/ase/debugging/testcases/TestCasesSelector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/tugraz/ist/ase/featuremodel/apps/FMGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/tugraz/ist/ase/featuremodel/apps/FMGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/tugraz/ist/ase/featuremodel/core/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/tugraz/ist/ase/featuremodel/core/Utilities.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

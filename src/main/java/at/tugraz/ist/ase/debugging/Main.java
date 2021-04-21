@@ -46,7 +46,7 @@ public class Main {
                         File folder = new File(conf.getFMSPathInData());
                         String pathtoSave = conf.getTestSuitePathInResults();
                         checkAndCreateFolder(pathtoSave);
-                        int maxCombinations = 10000;
+                        int maxCombinations = 3000;
                         boolean randomlySearch = false;
 
                         // Takes each file in the folder
