@@ -77,9 +77,11 @@ For further details of this app, we refer to [d2bug_eval.jar guideline](https://
 
 #### Use a bash script
 
-We provide two bash scripts that perform all necessary steps from *compiling the source code* to *running the DirectDebug evaluation process*. In particular, **run.sh** will compile the source files, package them in one *jar* file, and run the DirectDebug evaluation with the dataset used for the paper.
+We provide two bash scripts that perform all necessary steps from *compiling the source code* to *running the DirectDebug evaluation process*.
 
-Besides compiling and packaging the source files, **run_all.sh** will carry out all five steps of the DirectDebug evaluation process, and you will get the new dataset, new results. Three steps Feature model generation, Testsuite generation, and Test case classification will take a long time to complete. Thus, if you have 3-4 free days, then try with **run_all.sh**. Otherwise, please run the evaluation process step-by-step using our **d2bug_eval.jar**.
+First, **run.sh** will compile the source files, package them in one *jar* file, and run only the DirectDebug evaluation step (Step 5) with the dataset used for the paper.
+
+Second, **run_all.sh** will carry out all five steps of the DirectDebug evaluation process, and you will get the new dataset, new results. Three steps Feature model generation, Testsuite generation, and Test case classification will take a long time to complete. Thus, if you have around 3-4 free days, then try with **run_all.sh**. Otherwise, please run the evaluation process step-by-step using our **d2bug_eval.jar**.
 
 To run these bash scripts on your system after cloning the source code:
 
