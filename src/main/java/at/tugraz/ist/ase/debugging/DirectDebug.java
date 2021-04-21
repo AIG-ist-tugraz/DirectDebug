@@ -49,8 +49,6 @@ public class DirectDebug {
      */
     public Set<String> debug(Set<String> C, Set<String> B, Set<String> TC)
     {
-        incrementCounter(COUNTER_DIRECTDEBUG_CALLS);
-
         Set<String> BwithC = SetUtils.union(B, C); incrementCounter(COUNTER_UNION_OPERATOR);
 
         // if isEmpty(C) or consistent(B U C) return Φ

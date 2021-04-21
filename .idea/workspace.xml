@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01e647dc-89e0-4f4b-ac29-3295b124815f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/tugraz/ist/ase/debugging/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/tugraz/ist/ase/debugging/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/tugraz/ist/ase/debugging/testcases/TestCasesSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/tugraz/ist/ase/debugging/testcases/TestCasesSelector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/tugraz/ist/ase/debugging/DirectDebug.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/tugraz/ist/ase/debugging/DirectDebug.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +59,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
