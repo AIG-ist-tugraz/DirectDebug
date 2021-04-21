@@ -55,8 +55,8 @@ public class DirectDebugEvaluation {
         showEvaluations = conf.getShowEvaluation();
         showDebugs = conf.getShowDebug();
 
-        int col = 6;
-        int row = 7;
+        int col = conf.getCardCF().size();
+        int row = conf.getCardTS().size();
         double[][] results = createResultsTable(col, row);
 
         System.out.println("Evaluating...");
@@ -133,7 +133,7 @@ public class DirectDebugEvaluation {
 
         for (int i = 0; i < col; i++) {
             for (int j = 0; j < row; j++) {
-                results[i][j] /= 9;
+                results[i][j] /= (conf.getNumGenFM() * conf.getNumIter());
             }
         }
 
