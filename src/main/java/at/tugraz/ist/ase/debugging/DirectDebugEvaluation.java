@@ -113,7 +113,7 @@ public class DirectDebugEvaluation {
                                 if (count == 1) {
                                     results[indexCol][indexRow] += (double) getTimer(TIMER_FIRST).total() / 1_000_000_000.0;
 
-                                    System.out.println("\t\t\tTime for first: " + ((double)getTimer(TIMER_FIRST).total() / 1_000_000_000.0));
+//                                    System.out.println("\t\t\tTime for first: " + ((double)getTimer(TIMER_FIRST).total() / 1_000_000_000.0));
                                 }
                             } else {
                                 System.out.println("\t\t\tNO DIAGNOSIS----------------");
