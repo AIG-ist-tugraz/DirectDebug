@@ -131,4 +131,4 @@ Besides feature models encoded in the *SXFM* format and consistency checks condu
 
 ## References
 
-[1] Viet-Man Le, Alexander Felfernig et al., 2021. DirectDebug: Automated Testing and Debugging of Feature Models. In Proceedings of the 43rd International Conference on Software Engineering: New Ideas and Emerging Results (ICSE-NIER 2021). (to appear) [[PDF] from arxiv.org](https://arxiv.org/pdf/2102.05949.pdf)
+[1] V.M. Le, A. Felfernig, M. Uta, D. Benavides, J. Galindo and T.N.T. Tran, DirectDebug: Automated Testing and Debugging of Feature Models, 2021 IEEE/ACM 43rd International Conference on Software Engineering: New Ideas and Emerging Results (ICSE-NIER), 2021, pp. 81-85, doi: https://doi.org/10.1109/ICSE-NIER52604.2021.00025. [[PDF] from arxiv.org](https://arxiv.org/pdf/2102.05949.pdf)
