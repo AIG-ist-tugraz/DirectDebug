@@ -71,7 +71,7 @@ can be triggered by command line arguments.
 We published a standalone Java application naming **d2bug_eval.jar** that encapsulates the evaluation steps in one program.
 
 **d2bug_eval.jar** is available from the [latest release](https://github.com/AIG-ist-tugraz/DirectDebug/releases/tag/v1.1).
-For further details of this app, we refer to [d2bug_eval.jar guideline](https://github.com/AIG-ist-tugraz/DirectDebug/blob/main/dd.jar.md).
+For further details of this app, we refer to [d2bug_eval.jar guideline](https://github.com/AIG-ist-tugraz/DirectDebug/blob/main/d2bug_eval.jar.md).
 
 ### Get your own copy to run offline
 
